@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <script src="./js/jquery-3.7.0.min.js"></script> <!—jQueryのファイルの読み込み—>
+    <link href="./css/all.min.css" rel="stylesheet" >
+    <link href="./css/style.css" rel="stylesheet" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutedscape</title>
+  </head>
+
+  <body>
+    <header>
+
+      <nav>
+        <a href="index.html" class="logo">
+          <img src="images/mutedscapes-logo.png">
+        </a>
+      </nav>
+
+<!--▽▽ハンバーガーメニュー▽▽-->
+      <div id="hamburger">
+        <div class="icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <script>
+        $('#hamburger').on('click', function(){
+        $('.icon').toggleClass('close');
+        $('.hamburger-list').slideToggle();
+        });
+      </script>
+<!--△△ハンバーガーメニュー△△-->
+
+<!--▽▽ハンバーガーメニューのリスト▽▽-->
+      <nav class="hamburger-list">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="timelapse.html">TimeLapse</a></li>
+          <li><a href="photo.html">Photo</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="https://www.instagram.com/mutedscapes/" target="_blank" rel="nofollow"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.youtube.com/@mutedscapes/channels" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+      </nav>
+<!--△△ハンバーガーメニューのリスト△△-->
+
+<!--▽▽ヘッダーリスト▽▽-->
+      <nav class="main-menu">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="timelapse.html">TimeLapse</a></li>
+          <li><a href="photo.html">Photo</a></li>
+          <li><a href="map.html">Map</a></li>
+        </ul>
+      </nav>
+      <ul class="fas_sns_icon">
+        <li><a href="https://www.instagram.com/mutedscapes/" target="_blank" rel="nofollow"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.youtube.com/@mutedscapes/channels" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
+      </ul>
+<!--△△ヘッダーリスト△△-->
+
+    </header>
+
+      <div class="kv">
+        <div class="catch-copy">
+            <p class="main-copy"></p>
+            <p class="sub-copy"></p>
+        </div>
+      </div>
+
+      <div class="video">
+        <video src="video/web-haikei2.mp4" autoplay loop muted playsinlin></video>
+      </div>
+
+    <main>
+    </main>
+
+    <footer>
+      <p>&copy; Copyright 2023 Mutedscapes</p>
+    </footer>
+
+  </body>
+</html>

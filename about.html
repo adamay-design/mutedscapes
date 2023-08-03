@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <script src="./js/jquery-3.7.0.min.js"></script> <!—jQueryのファイルの読み込み—>
+    <link href="./css/all.min.css" rel="stylesheet" >
+    <link href="./css/style.css" rel="stylesheet" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutedscape</title>
+  </head>
+
+  <body class="about">
+    <header>
+
+      <nav>
+        <a href="index.html" class="logo">
+          <img src="images/mutedscapes-logo.png">
+        </a>
+      </nav>
+
+<!--▽▽ハンバーガーメニュー▽▽-->
+        <div id="hamburger">
+          <div class="icon">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+        </div>
+        <script>
+          $('#hamburger').on('click', function(){
+          $('.icon').toggleClass('close');
+          $('.hamburger-list').slideToggle();
+          });
+        </script>
+<!--△△ハンバーガーメニュー△△-->
+
+<!--▽▽ハンバーガーメニューのリスト▽▽-->
+        <nav class="hamburger-list">
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="timelapse.html">TimeLapse</a></li>
+            <li><a href="photo.html">Photo</a></li>
+            <li><a href="map.html">Map</a></li>
+            <li><a href="https://instagram.com/intent/tweet?text={ページタイトル}&url={URL}" target="_blank" rel="nofollow"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/entry/mode=confirm&title={ページタイトル}&url={URL}" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+        </nav>
+<!--△△ハンバーガーメニューのリスト△△-->
+
+<!--▽▽ヘッダーリスト▽▽-->
+        <nav class="main-menu">
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="timelapse.html">TimeLapse</a></li>
+            <li><a href="photo.html">Photo</a></li>
+            <li><a href="map.html">Map</a></li>
+          </ul>
+        </nav>
+        <ul class="fas_sns_icon">
+          <li><a href="https://instagram.com/intent/tweet?text={ページタイトル}&url={URL}" target="_blank" rel="nofollow"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.youtube.com/entry/mode=confirm&title={ページタイトル}&url={URL}" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+<!--△△ヘッダーリスト△△-->
+
+    </header>
+
+    <main>
+      <article>
+        <div class="content-container">
+          <h1>About</h1>
+          <h2>背景</h2>
+          <p>近年、福岡市は天神ビッグバンや福岡コネクティッドなどの都市開発によって、街の様相が大きく変化している。新たなビルが続々と建設される中で、特に目を引くのがガラス張りのビルやガラスを基調とした建物だ。反射によって福岡の街が映し出される窓ガラスからは、額に入れて飾られた絵画作品のような印象を受ける。私はそこに着目し、窓ガラスに映り込む世界をタイムラプスと写真で記録することにした。</p>
+          <br></br>
+          <h2>目的</h2>
+          <p>このプロジェクトは、情報が溢れる現代社会において、私たちが見逃している街の魅力を伝えることが目的である。具体的には、全面ガラス張りのビルやガラスを基調とした建物を対象にタイムラプスと写真を撮影し、Webサイトに掲載。最終的にWebサイトの閲覧者の感想をまとめるアンケート調査を実施する。さらにガラスを基調としたデザインが増加したことの要因や、それによる影響を考察する。このプロジェクトを通じて、新たな視点を提供することを目指す。</p>
+          <br></br>
+          <h2>コンセプト</h2>
+          <p>タイトルの「Mutedscape」は、英語で無音や抑制されたを意味する「muted」と、景色を意味する「scape」を組み合わせた造語である。このタイトルをつけた理由は、情報に溢れる現代社会において、敢えて情報の制限された景色に浸ることで、新たな発見があるというメッセージが込められている。</p>
+        </div>
+      </article>
+    </main>
+
+    <div class="wrapper">
+      <footer>
+        &copy; Copyright 2023 Mutedscape
+      </footer>
+    </div>
+
+  </body>
+</html>
