@@ -12,6 +12,8 @@
     margin: 0 auto;
 }
 
+html {scroll-behavior: smooth;}
+
 body{
 	margin: 0;
     min-width:960px;
@@ -116,38 +118,15 @@ nav{
 	align-items: center;
 }
 
-
 /*==================================================
 Index HTMLのためのcss
 ===================================*/
-/* kv */
-.kv{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .kv .main-copy{
-    color: #fff;
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1;
-    letter-spacing: .2em;
-  }
-
-  .kv .sub-copy{
-    color: #fff;
-    font-size: 20px;
-    text-align: center;
-  }
 
   /* video */
   .video{
     width: 100%;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     overflow: hidden;
@@ -176,25 +155,65 @@ Index HTMLのためのcss
     transform: translateX(-50%) translateY(-50%);
   }
 
-@media screen and (min-width: 768px) {
-
-.kv body{
-    min-width:400px;
+.transparent{
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
 }
 
-/* kv */
-.kv{
-    min-width: 400px;
+.overview{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
 }
 
-.kv .main-copy{
-    font-size: 60px;
+.front_content2{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0);
 }
 
-.kv .sub-copy{
+.page-container{
+    padding: 120px 120px 0px 120px;
+}
+
+.text-container {
+    text-align: left;
+}
+
+.text-container h1 {
+    color: #FFF;
+    text-align: left;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
     font-size: 30px;
+    margin-bottom: 30px;
+    word-break: keep-all;
 }
 
+.text-container h2 {
+    color: #FFF;
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 5px;
+    word-break: keep-all;
+}
+
+.text-container h3 {
+    color: #FFF;
+    text-align: left;
+    margin-bottom: 18px;
+    word-break: keep-all;
+}
+
+.text-container p {
+    color: #FFF;
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
 /* video */
 .video{
     min-width: 768px;
@@ -210,33 +229,30 @@ Index HTMLのためのcss
 /*==================================================
 aboutのためのcss
 ===================================*/
-.about article {
+
+article {
     margin: 120px 100px 80px;
 }
 
-.about h1 {
-    color: #FFF;
-    font-family: "ヒラギノ角ゴ ProN W5";
-    font-size: 18pt;
-    text-align: justify;
-    margin-bottom: 30px;
+/*==================================================
+timelapseのためのcss
+===================================*/
+
+.youtube-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-.about h2 {
-    color: #FFF;
-    font-family: "ヒラギノ角ゴ ProN W5";
-    font-size: 14pt;
-    text-align: justify;
-    margin-bottom: 10px;
-}
-
-.about p {
-    color: #FFF;
-    font-family: "ヒラギノ角ゴ ProN W5";
-    font-size: 10pt;
-    line-height: 1.7;
-    text-align: justify;
-    margin-bottom: 10px;
+.youtube-container{
+   position: relative;
+   padding-bottom: 56.25%; /*アスペクト比 16:9の場合の縦幅*/
+   height: 0;
+   overflow: hidden;
+   text-align: center;
+   margin-bottom: 60px;
 }
 
 
@@ -284,8 +300,6 @@ body{
     margin: 0;
     min-width:450px;
     background:#000;
-    font-size:12px;
-    font-family:  "ヒラギノ角ゴ ProN W5", HiraKakuProN-W5, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
 }
 
 .main-menu {
@@ -355,6 +369,7 @@ body{
 }
 
 .hamburger-list {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
     font-size:20px;
     top: 80px;  /*headerの余白分*/
     left: 0px;  /*headerの余白分　ヘッダーには左右に15px余白があるので、headerの子要素となる.hamburger-listは15px分内側に設置されます。その余白を埋めるために左に寄せる。*/
@@ -384,24 +399,32 @@ nav.hamburger-list{
 }
 
 .hamburger-list ul li a:hover {
-		background: #222;
-		height: 10rem;
-		text-align: center;
+    background: #222;
+    height: 10rem;
+    text-align: center;
 }
 
 ul {
-		flex-direction: column;
-		text-align: center;
+    flex-direction: column;
+    text-align: center;
 }
 }
 
+.wrapper{
+    min-height: 15vh;
+    position: relative;/*←相対位置*/
+    padding-bottom: 80px;/*←footerの高さ*/
+    box-sizing: border-box;
+    background-color: #000;
+}
 
-footer {
-    color: #FFF;
-    padding: 10px;
-    font-family: "ヒラギノ角ゴ ProN W2";
-    font-size: 11px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
+footer{
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 12px;
+    padding: 20px 0;
+    position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
 }

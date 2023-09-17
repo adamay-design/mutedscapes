@@ -7,7 +7,10 @@
     <link href="./css/all.min.css" rel="stylesheet" >
     <link href="./css/style.css" rel="stylesheet" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mutedscape</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
+    <title>Mutedscapes</title>
   </head>
 
   <body>
@@ -65,23 +68,34 @@
 
     </header>
 
-      <div class="kv">
-        <div class="catch-copy">
-            <p class="main-copy"></p>
-            <p class="sub-copy"></p>
-        </div>
-      </div>
-
-      <div class="video">
-        <video src="video/web-haikei2.mp4" autoplay loop muted playsinlin></video>
-      </div>
-
     <main>
+
+        <section class="video">
+          <video src="video/web-haikei2.mp4" autoplay loop muted playsinlin></video>
+        </section>
+
+        <section class="transparent"></section>
+        
+        <section class="overview">
+          <div class="page-container">
+            <div class="text-container">
+              <h1><span style="font-size: 40px;">『Mutedscapes』とは</span></h1>
+              <p><span style="font-size: 20px;">タイムラプスと写真を通じて、普段見逃されがちなビルに反射される景色の魅力について発信するプロジェクトです。</span></p>
+              <p><span style="font-size: 20px;">一般的に、ビルは無機質で冷たく、時間の変化がないように感じるといったと印象を持たれる方が多いと思います。しかし、ガラス張りのビルには、ここに加えて周囲の景色を反射するといった特徴が存在します。この特徴にフォーカスしたのが、『Mutedscapes』です。鏡のようなガラスに映り込む景色には、空の色や雲の形状の変化によって時間の移り変わりが反映され、表情豊かなビルの新たな一面を感じられます。</span>
+            </div>
+          </div>
+        </section> <!--/overview-->
+        
+
+        <section class="front_content2"></section>
+
     </main>
 
-    <footer>
-      <p>&copy; Copyright 2023 Mutedscapes</p>
-    </footer>
+        <div class="wrapper">
+          <footer>
+            <p>&copy; Copyright 2023 Mutedscapes</p>
+          </footer>
+        </div>
 
   </body>
 </html>
