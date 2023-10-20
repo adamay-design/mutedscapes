@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
         <title>Mutedscapes</title>
         <!--
         <link rel="stylesheet" type="text/css" href="css/6-2-1.css">
@@ -21,95 +21,93 @@
 
       <body class="photo">
 
-        <header>
+      <header>
 
-          <nav>
-            <a href="index.html" class="logo">
-              <img src="images/mutedscapes-logo.png">
-            </a>
-          </nav>
+        <nav>
+          <a href="index.html" class="logo">
+            <img src="images/mutedscapes-logo-b.png">
+          </a>
+        </nav>
 
-<!--▽▽ハンバーガーメニュー▽▽-->
-          <div id="hamburger">
-              <div class="icon">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-              </div>
-          </div>
-<!--△△ハンバーガーメニュー△△-->
+        <!--▽▽ハンバーガーメニュー▽▽-->
+        <div id="hamburger">
+            <div class="icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <script src="jquery-3.7.0.min.js"></script> <!—jQueryのファイルの読み込み—>
+        <script>
+          $('#hamburger').on('click', function(){
+              $('.icon').toggleClass('close');
+              $('.hamburger-list').slideToggle();
+          });
+        </script>
+        <!--△△ハンバーガーメニュー△△-->
 
-<!--▽▽ハンバーガーメニューのリスト▽▽-->
-          <nav class="hamburger-list">
-            <ul>
-              <li><a href="about.html">About</a></li>
-              <li><a href="timelapse.html">TimeLapse</a></li>
-              <li><a href="photo.html">Photo</a></li>
-              <li><a href="map.html">Map</a></li>
-              <li><a href="https://instagram.com/intent/tweet?text={ページタイトル}&url={URL}" target="_blank" rel="nofollow"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="https://www.youtube.com/entry/mode=confirm&title={ページタイトル}&url={URL}" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
-            </ul>
-          </nav>
-          <!--△△ハンバーガーメニューのリスト△△-->
-
-          <!--▽▽ヘッダーリスト▽▽-->
-          <nav class="main-menu">
-            <ul>
-              <li><a href="about.html">About</a></li>
-              <li><a href="timelapse.html">TimeLapse</a></li>
-              <li><a href="photo.html">Photo</a></li>
-              <li><a href="map.html">Map</a></li>
-            </ul>
-          </nav>
-          <ul class="fas_sns_icon">
+        <!--▽▽ハンバーガーメニューのリスト▽▽-->
+        <nav class="hamburger-list">
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="timelapse.html">TimeLapse</a></li>
+            <li><a href="photo.html">Photo</a></li>
+            <li><a href="map.html">Map</a></li>
             <li><a href="https://instagram.com/intent/tweet?text={ページタイトル}&url={URL}" target="_blank" rel="nofollow"><i class="fab fa-instagram"></i></a></li>
             <li><a href="https://www.youtube.com/entry/mode=confirm&title={ページタイトル}&url={URL}" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
           </ul>
-          <!--△△ヘッダーリスト△△-->
+        </nav>
+        <!--△△ハンバーガーメニューのリスト△△-->
 
-                </header>
+        <!--▽▽ヘッダーリスト▽▽-->
+        <nav class="main-menu">
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="timelapse.html">TimeLapse</a></li>
+            <li><a href="photo.html">Photo</a></li>
+            <li><a href="map.html">Map</a></li>
+            <li><a href="https://www.instagram.com/mutedscapes/" target="_blank" rel="nofollow"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/@mutedscapes/channels" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+        </nav>
+        <!--△△ヘッダーリスト△△-->
 
-          <script src="jquery-3.7.0.min.js"></script> <!—jQueryのファイルの読み込み—>
-          <script>
-            $('#hamburger').on('click', function(){
-                $('.icon').toggleClass('close');
-                $('.hamburger-list').slideToggle();
-            });
-          </script>
+      </header>
 
       <main>
 
-            <article>
-              <div class="gallery-container">
-                <ul class="gallery">
-                  <li><a href="photo/DSC00751.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00751.jpg" alt=""></a></li>
-                  <li><a href="photo/DSC00791.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00791.jpg" alt=""></a></li>
-                  <li><a href="photo/DSC01506.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC01506.jpg" alt=""></a></li>
-                  <li><a href="photo/DSC00838.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00838.jpg" alt=""></a></li>
-                  <li><a href="photo/DSC07239.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC07239.jpg" alt=""></a></li>
-                  <li><a href="photo/DSC01505.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC01505.jpg" alt=""></a></li>
-                  <li><a href="photo/DSC00901.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00901.jpg" alt=""></a></li>
-                  <li><a href="photo/DSC00933.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00933.jpg" alt=""></a></li>
-                  <li><a href="photo/DSC00951.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00951.jpg" alt=""></a></li>
-                  <li><a href="photo/DSC00735.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00735.jpg" alt=""></a></li>
-                  <li><a href="photo/DSC00810.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00810.jpg" alt=""></a></li>
-                  <li><a href="photo/DSC00828.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00828.jpg" alt=""></a></li>
-                  <li><a href="photo/DSC00893.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00893.jpg" alt=""></a></li>
-                  <li><a href="photo/DSC00945.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00945.jpg" alt=""></a></li>
-                  <li><a href="photo/DSC00950.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00950.jpg" alt=""></a></li>
-                </ul>
-              </div>
-            </article>
-            <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
-            <!--自作のJS-->
-            <script src="js/6-2-1.js"></script>
+        <article>
+          <div class="gallery-container">
+            <ul class="gallery">
+              <li><a href="photo/DSC00751.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00751.jpg" alt=""></a></li>
+              <li><a href="photo/DSC00791.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00791.jpg" alt=""></a></li>
+              <li><a href="photo/DSC01506.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC01506.jpg" alt=""></a></li>
+              <li><a href="photo/DSC00838.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00838.jpg" alt=""></a></li>
+              <li><a href="photo/DSC07239.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC07239.jpg" alt=""></a></li>
+              <li><a href="photo/DSC01505.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC01505.jpg" alt=""></a></li>
+              <li><a href="photo/DSC00901.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00901.jpg" alt=""></a></li>
+              <li><a href="photo/DSC00933.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00933.jpg" alt=""></a></li>
+              <li><a href="photo/DSC00951.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00951.jpg" alt=""></a></li>
+              <li><a href="photo/DSC00735.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00735.jpg" alt=""></a></li>
+              <li><a href="photo/DSC00810.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00810.jpg" alt=""></a></li>
+              <li><a href="photo/DSC00828.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00828.jpg" alt=""></a></li>
+              <li><a href="photo/DSC00893.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00893.jpg" alt=""></a></li>
+              <li><a href="photo/DSC00945.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00945.jpg" alt=""></a></li>
+              <li><a href="photo/DSC00950.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00950.jpg" alt=""></a></li>
+              <li><a href="photo/DSC00790.jpg" data-lightbox="gallery1" data-title="キャプション"><img src="photo/DSC00790.jpg" alt=""></a></li>
+            </ul>
+          </div>
+        </article>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+        <!--自作のJS-->
+        <script src="js/6-2-1.js"></script>
             
       </main>
 
       <div class="wrapper">
         <footer>
-          <p>&copy; Copyright 2023 Mutedscapes</p>
+          <p>&copy;2023 Mutedscapes</p>
         </footer>
       </div>
       

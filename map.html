@@ -6,8 +6,13 @@
     <script src="./js/jquery-3.7.0.min.js"></script> <!—jQueryのファイルの読み込み—>
     <link href="./css/all.min.css" rel="stylesheet" >
     <link href="./css/style.css" rel="stylesheet" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mutedscape</title>
+    <title>Mutedscapes</title>
   </head>
 
   <body>
@@ -15,7 +20,7 @@
 
       <nav>
         <a href="index.html" class="logo">
-          <img src="images/mutedscapes-logo.png">
+          <img src="images/mutedscapes-logo-b.png">
         </a>
       </nav>
 
@@ -55,22 +60,24 @@
             <li><a href="timelapse.html">TimeLapse</a></li>
             <li><a href="photo.html">Photo</a></li>
             <li><a href="map.html">Map</a></li>
+            <li><a href="https://www.instagram.com/mutedscapes/" target="_blank" rel="nofollow"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/@mutedscapes/channels" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
           </ul>
         </nav>
-        <ul class="fas_sns_icon">
-          <li><a href="https://instagram.com/intent/tweet?text={ページタイトル}&url={URL}" target="_blank" rel="nofollow"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="https://www.youtube.com/entry/mode=confirm&title={ページタイトル}&url={URL}" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
-        </ul>
 <!--△△ヘッダーリスト△△-->
 
     </header>
 
       <main>
+        <div id="map"></div>
+        <script src="script.js"></script>
       </main>
 
-      <footer>
-        <p>&copy; Copyright 2023 Mutedscape</p>
-      </footer>
-
+      <div class="wrapper">
+        <footer>
+          <p>&copy;2023 Mutedscapes</p>
+        </footer>
+      </div>
+      
   </body>
 </html>

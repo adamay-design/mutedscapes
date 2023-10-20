@@ -17,113 +17,91 @@ html {scroll-behavior: smooth;}
 body{
 	margin: 0;
     min-width:960px;
-	background:#000;
+	background:#FFF;
 	font-size:15px;
-	font-family:  "ヒラギノ角ゴ ProN W5", HiraKakuProN-W5, 游ゴシック, "Yu Gothic", メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
-    text-size-adjust: none;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 header {
-  height: 90px;
-  width: 100%;
-  padding: 0;
-  position: fixed;
-  top: 0;
-  display: flex;
-  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0));
-}
-
-.photo header {
-  background: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,1));
+    z-index: 20;
+    height: 75px;
+    width: 100%;
+    top: 0;
+    padding: 0;
+    position: fixed;
+    display: flex;
+    background-color: rgba(255,255,255,0.85);
+    backdrop-filter: blur(6px);
 }
 
 nav{
 	position:relative;
     display:flex;
-    justify-content:right;
 	align-items:center;
-    height:80px;
+    height:75px;
     width:100%;
-    margin:0;
 }
 
 .logo{
 	display: block;
-	width: 250px;
+	width: 210px;
 	position: fixed;
-	top: 25px;
 	left: 40px;
 }
 
 .logo img{
     width:100%;
     height:auto;
+    vertical-align:top;
 }
 
 .main-menu {
 	position: fixed;
-	top: 5px;
-    right: 140px;
+	top: 0px;
+    right: 0px;
     width: auto;
+    right: 40px;
+}
+
+.main-menu ul{
+    text-align: center;
+    height: 30px; /*メニューの高さ*/
 }
 
 .main-menu ul li {
-	text-align: center;
 	float: left;
-	height: 20px; /*メニューの高さ*/
 }
 
 .main-menu ul li a {
-	height:60px;
-    margin-left:0px;
-    color:#FFF;
+	height: 80px;
+    vertical-align:middle;
+    color:#000;
     text-decoration:none;
     letter-spacing:.1em;
 	padding: 10px 10px;
-    font-size: 15px;
+    font-size: 18px;
 }
-
+/*
 .main-menu ul li a:hover {
-    background: #222;
+    background: #FFF;
+}
+*/
+
+.fa-instagram{
+    font-size: 25px;
+    margin: 0 0 0 2px;
 }
 
-.fas_sns_icon{
-	margin: 35px 50px;
-	padding: 0;
-	display: -webkit-flex;
-    display: -moz-flex;
-    display: flex;
-}
-.fas_sns_icon li{
-	list-style: none;
-	margin: 0 30px 0 0;
-}
-.fas_sns_icon li:last-child{
-	margin: 0 0 0 0;
-}
-.fas_sns_icon li a{
-	text-decoration: none;
-	display: inline-block;
-}
-.fas_sns_icon li a i{
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	color: #FFF;
-	font-size: 30px;
-	display: -webkit-flex;
-    display: -moz-flex;
-    display: flex;
-	justify-content: center;
-	align-items: center;
+.fa-youtube{
+    font-size: 25px;
+    margin: 0 0 0 2px;
 }
 
 /*==================================================
 Index HTMLのためのcss
 ===================================*/
 
-  /* video */
-  .video{
+.top{
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -131,9 +109,9 @@ Index HTMLのためのcss
     left: 0;
     overflow: hidden;
     z-index: -1;
-  }
+}
 
-  .video::after{
+.top::after{
     content: '';
     width: 100%;
     height: 100%;
@@ -142,9 +120,9 @@ Index HTMLのためのcss
     left: 0;
     top: 0;
     opacity: .3;
-  }
+}
 
-  .video video{
+.top img{
     min-width: 100%;
     min-height: 100%;
     width: auto;
@@ -153,7 +131,48 @@ Index HTMLのためのcss
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-  }
+}
+
+
+.video{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .3;
+}
+
+.video video{
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+@media screen and (max-width: 480px) {
+    .video{
+        min-width: 480px;
+    }
+    }
+
 
 .transparent{
     width: 100%;
@@ -161,65 +180,203 @@ Index HTMLのためのcss
     background-color: transparent;
 }
 
+/*
+.topCurtainbg, .bottomCurtainbg {
+    display: block;
+    content: "";
+    position:fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    background-color: #000;
+    animation-duration:1.2s;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode:forwards;
+}
+
+.topCurtainbg {
+    top: 0%;
+    transform: scaleY(0);
+    animation-name:curtainAnimeTop;
+}
+
+.bottomCurtainbg {
+    left: 0%;
+    bottom: 0%;
+    transform: scaleY(1);
+    animation-name:curtainAnimeBottom;
+}
+
+@keyframes curtainAnimeTop {
+	0% {
+		transform-origin:top;
+		transform:scaleY(1);
+	}
+	50% {
+		transform-origin:top;
+	}
+	100% {
+		transform-origin:top;
+		transform:scaleY(0);
+	}
+}
+
+@keyframes curtainAnimeBottom {
+	0% {
+		transform-origin:bottom;
+		transform:scaleY(1);
+	}
+	50% {
+		transform-origin:bottom;
+	}
+	100% {
+		transform-origin:bottom;
+		transform:scaleY(0);
+	}
+}
+
+.fadeout {
+  animation : fadeOut 0.8s;
+  animation-fill-mode: both;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*bodyにpageOnクラスがついたら出現
+body.pageOn #container{
+	animation-name:PageAnimeOn;
+	animation-duration:1s;
+	animation-delay: 0.2s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes PageAnimeOn{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}
+*/
+
 .overview{
     width: 100%;
     height: 100vh;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(255,255,255,0.85);
+    backdrop-filter: blur(6px);
 }
 
-.front_content2{
+.ov-text-container{
+    padding: 0 120px;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0,0,0);
+    display: table-cell;
+    vertical-align: middle;
 }
 
-.page-container{
-    padding: 120px 120px 0px 120px;
-}
-
-.text-container {
-    text-align: left;
-}
-
-.text-container h1 {
-    color: #FFF;
-    text-align: left;
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+.ov-text1{
+    color: #000;
     font-size: 30px;
-    margin-bottom: 30px;
-    word-break: keep-all;
+    line-height: 1.7;
+    margin-bottom: 20px;
 }
 
-.text-container h2 {
-    color: #FFF;
-    text-align: left;
+.ov-text2{
+    color: #000;
     font-size: 20px;
-    margin-bottom: 5px;
-    word-break: keep-all;
+    line-height: 1.7;
+    margin-bottom: 30px;
 }
 
-.text-container h3 {
+a.btn_01 {
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 1.5px solid #000;
+    box-sizing: border-box;
+    width: 140px;
+    height: 40px;
+    padding: 0;
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+    position: relative;
+    transition-duration: 0.2s;
+}
+a.btn_01:hover {
+  background: #000;
+  color: #FFF;
+}
+
+
+.slideshow{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255,255,255,0.85);
+    backdrop-filter: blur(6px);
+    display: table-cell;
+}
+.slide-container {
+    width: 100vw;
+    margin: 10vh auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.slide-wrapper {
+    display: flex;
+    animation: slide-flow 20s infinite linear 1s both;
+}
+.slide{
+    width: 300px;
+    object-fit:cover;
+    border: 1px solid #FFF;
+}
+@keyframes slide-flow {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-100%);}
+}
+
+
+
+
+
+@media (max-width: 768px) {
+.ov-text-container{
+    padding: 0 80px;
+    width: 100%;
+    height: 100vh;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.ov-text1{
     color: #FFF;
-    text-align: left;
-    margin-bottom: 18px;
-    word-break: keep-all;
+    font-size: 25px;
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 20px;
 }
 
-.text-container p {
+.ov-text2{
     color: #FFF;
     font-size: 16px;
     line-height: 1.7;
     text-align: justify;
     margin-bottom: 20px;
 }
-
-@media screen and (min-width: 768px) {
-/* video */
-.video{
-    min-width: 768px;
 }
-}
-
 
 .hamburger-list {
     display: none;	/*ハンバーガーメニューのリスト（スマホ用）を非表示*/
@@ -230,13 +387,80 @@ Index HTMLのためのcss
 aboutのためのcss
 ===================================*/
 
-article {
-    margin: 120px 100px 80px;
+.about {
+    margin: 150px 0px 0px;
+}
+
+.card-container1{
+    align-items: center;
+    display: flex;
+    margin: 0 180px 200px;
+    background-color: #FFF;
+}
+
+.card-text1{
+    padding-right: 40px;
+    white-space: nowrap;
+}
+
+
+.card-container2{
+    align-items: center;
+    display: flex;
+    margin: 0 180px 200px;
+    background-color: #FFF;
+}
+
+.card-text2{
+    padding-left: 40px;
+    white-space: nowrap;
+}
+
+
+.about h1{
+    color: #000;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 25px;
+    word-break: keep-all;
+}
+
+
+.about h2{
+    color: #000;
+    text-align: left;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 25px;
+    word-break: keep-all;
+    padding-bottom: 20px;
+}
+.about p{
+    color: #000;
+    text-align: left;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
 }
 
 /*==================================================
 timelapseのためのcss
 ===================================*/
+
+.contents{
+    padding: 0 180px 40px;
+    background-color: #FFF;
+}
+
+.title-container{
+    margin-bottom: 30px;
+}
+
+.title-container h1{
+    margin-top: 150px;
+    text-align: left;
+    font-size: 25px;
+    color: #000;
+    font-family: 'Noto Sans JP', sans-serif;
+}
 
 .youtube-container iframe {
     position: absolute;
@@ -252,9 +476,27 @@ timelapseのためのcss
    height: 0;
    overflow: hidden;
    text-align: center;
-   margin-bottom: 60px;
+   margin-bottom: 30px;
 }
 
+.work-text-container {
+   margin-bottom: 150px;
+   text-align: left;
+   color: #FFF;
+}
+
+.details {
+    margin-bottom: 30px;
+}
+
+.details p {
+   line-height: 1.7;
+   text-align: justify;
+   margin-bottom: 0;
+   font-family: 'Noto Sans JP', sans-serif;
+   font-size: 15px;
+   color: #909090;
+}
 
 /*==================================================
 ギャラリーのためのcss
@@ -290,6 +532,14 @@ timelapseのためのcss
     }
 }
 
+/*==================================================
+mapのためのcss
+===================================*/
+
+#map {
+    height: 180px;
+}
+
 /**********************************　
 以下、ハンバーガーメニューの設定　
 ************************************/
@@ -299,7 +549,7 @@ timelapseのためのcss
 body{
     margin: 0;
     min-width:450px;
-    background:#000;
+    background:#FFF;
 }
 
 .main-menu {
@@ -314,7 +564,7 @@ body{
 	display: block;
 	width: 250px;
 	position: fixed;
-	top: 25px;
+	top: 21px;
 	left: 30px;
 }
 
@@ -331,7 +581,8 @@ body{
 	right: 10px;
     height: 40px;
 	width: 40px;                    /*高さと同じ幅*/
-	}
+    z-index: 20;
+}
 
 .icon span {
     position: absolute;       /*親要素である#hamburgerを基準に位置を指定*/
@@ -339,7 +590,7 @@ body{
 	right: 10px;               /*#hamburger内の左がら15pxに横線を配置（幅が60pxなので右からも15px）*/
     width: 30px;              /*横線の幅*/
     height: 3px;              /*横線の高さ*/
-    background-color: white;  /*横線を白色*/
+    background-color: #000;  /*横線を白色*/
     transition: ease 0.5s;   /*変化の時間（easeは初期値）*/
 }
 
@@ -349,7 +600,6 @@ body{
 .icon span:nth-of-type(2) {
     top: 28px;
 }
-
 .icon span:nth-of-type(3) {
     top: 40px;
 }
@@ -369,15 +619,13 @@ body{
 }
 
 .hamburger-list {
+    z-index: 19;
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
     font-size:20px;
-    top: 80px;  /*headerの余白分*/
-    left: 0px;  /*headerの余白分　ヘッダーには左右に15px余白があるので、headerの子要素となる.hamburger-listは15px分内側に設置されます。その余白を埋めるために左に寄せる。*/
+    top: 65px;  /*headerの余白分　ヘッダーには左右に15px余白があるので、headerの子要素となる.hamburger-listは15px分内側に設置されます。その余白を埋めるために左に寄せる。*/
     position: absolute; /*絶対配置　top　leftからの位置を絶対配置する*/
-    z-index: 10;
     height: 100vh;
-    width: 100%;
-    background-color: rgba(0, 0, 0);
+    background: #000;
 }
 
 .hamburger-list ul li {
@@ -398,11 +646,17 @@ nav.hamburger-list{
 	padding: 5px 10px;
 }
 
+.fa-instagram{
+    padding-top: 3px;
+}
+
+/*
 .hamburger-list ul li a:hover {
     background: #222;
     height: 10rem;
     text-align: center;
 }
+*/
 
 ul {
     flex-direction: column;
@@ -415,15 +669,18 @@ ul {
     position: relative;/*←相対位置*/
     padding-bottom: 80px;/*←footerの高さ*/
     box-sizing: border-box;
-    background-color: #000;
+    background-color: #ffffff;
+}
+
+.wrapper p{
+    color: #000;
+    text-align: center;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 12px;
 }
 
 footer{
     width: 100%;
-    color: #fff;
-    text-align: center;
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
-    font-size: 12px;
     padding: 20px 0;
     position: absolute;/*←絶対位置*/
     bottom: 0; /*下に固定*/
