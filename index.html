@@ -9,8 +9,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <title>Mutedscapes</title>
+    <style>
+      .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+      }
+
+      .mySlides {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          transition: opacity 1s ease;
+      }
+
+      .mySlides.active {
+          opacity: 1;
+      }
+
+      .slide-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+  </style>
   </head>
 
   <body>
@@ -71,13 +96,11 @@
         <section class="video">
           <video src="video/web-haikei2.mp4" autoplay loop muted playsinlin></video>
         </section>
-
-        <section class="transparent">
-          <div class="topCurtainbg"></div>
-          <div class="bottomCurtainbg"></div>
-          <div class="band"></div>
-        </section>
         
+        <section class="transparent"></section>
+        
+      <div id="swiper-container">
+
         <section class="overview">
             <div class="ov-text-container">
               <p class="ov-text1">『Mutedscapes』</p>
@@ -89,51 +112,75 @@
           </div>
         </section>
 
+        <section class="photo-intro">
 
-        <section class="slideshow">
-          
-          <div class="slide-container">
-            <div class="slide-wrapper">
-            <img class="slide" src="photo/DSC00901.jpg">
-            <img class="slide" src="photo/DSC00751.jpg">
-            <img class="slide" src="photo/DSC00790.jpg">
-            </div>
-            <div class="slide-wrapper">
-              <img class="slide" src="photo/DSC00901.jpg">
-              <img class="slide" src="photo/DSC00751.jpg">
-              <img class="slide" src="photo/DSC00790.jpg">
-            </div>
-            <div class="slide-wrapper">
-              <img class="slide" src="photo/DSC00901.jpg">
-              <img class="slide" src="photo/DSC00751.jpg">
-              <img class="slide" src="photo/DSC00790.jpg">
-            </div>
-          </div>
+          <div class="inner-s">
 
-          <div class="ov-text-container">
-            <p class="ov-text1">Photo</p>
-            <p class="ov-text2">
-              常に変化し続ける空や街並みを纏う窓ガラス。
-              <br>もう二度と訪れない瞬間を写真で記録しました。
-            </p>
-          <div class="button">
-            <a href="photo.html" class="btn_01">Read More</a>
-          </div>
-
-        </section>
-
-        <section class="overview">
-          <div class="ov-text-container">
-            <p class="ov-text1">TimeLapse</p>
-            <p class="ov-text2">
-              人工物であるビルと自然物である空。
-              <br>さらに留まり続けるビルと絶えず変化し続ける空。
-              <br>2つの視点での対比をタイムラプスとして表現しました。
+            <div class="text-container-s">
+              <p class="ov-text1">Photo</p>
+              <p class="ov-text2">
+                常に変化し続ける空や街並みを纏う窓ガラス。
+                <br>もう二度と訪れない瞬間を写真で記録しました。
               </p>
-          <div class="button">
-            <a href="timelapse.html" class="btn_01">Read More</a>
+              <div class="button">
+                <a href="photo.html" class="btn_01">Read More</a>
+              </div>
+            </div>
+
+            <div class="slide-container">
+              <div class="mySlides active">
+                  <img class="slide" src="photo/DSC00901.jpg" alt="Slide 1">
+              </div>
+              <div class="mySlides">
+                  <img class="slide" src="photo/DSC00751.jpg" alt="Slide 2">
+              </div>
+              <div class="mySlides">
+                  <img class="slide" src="photo/DSC00790.jpg" alt="Slide 3">
+              </div>
+            </div>
+        
+            <script>
+              let slideIndex = 0;
+              showSlides();
+          
+              function showSlides() {
+                  let slides = document.getElementsByClassName("mySlides");
+                  for (let i = 0; i < slides.length; i++) {
+                      slides[i].style.opacity = 0;
+                  }
+                  slideIndex++;
+                  if (slideIndex > slides.length) {
+                      slideIndex = 1;
+                  }
+                  slides[slideIndex - 1].style.opacity = 1;
+                  setTimeout(showSlides, 5000); // Change image every 5 seconds
+              }
+            </script>
+
+          </div>
+
+        </section>
+
+        <section class="timelapse-intro">
+          <div class="inner-t">
+            <div class="text-container-t">
+              <p class="ov-text1">TimeLapse</p>
+              <p class="ov-text2">
+                人工物であるビルと自然物である空。
+                <br>さらに留まり続けるビルと絶えず変化し続ける空。
+                <br>2つの視点での対比をタイムラプスとして表現しました。
+              </p>
+              <div class="button">
+                <a href="timelapse.html" class="btn_01">Read More</a>
+              </div>
+            </div>
+            <div class="timelapse-container">
+              <video src="video/solaria.mp4" autoplay loop muted playsinlin></video>
+            </div>
           </div>
         </section>
+
+      </div>
 
     </main>
 
