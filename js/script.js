@@ -1,52 +1,56 @@
 //lightbox オプションの設定※https://lokeshdhakar.com/projects/lightbox2/#options参照
 
-lightbox.option({
-    'wrapAround': true,//グループ最後の写真の矢印をクリックしたらグループ最初の写真に戻る
-    'albumLabel': ' %1 / total %2 '//合計枚数中現在何枚目かというキャプションの見せ方を変更できる
-  })
+ lightbox.option({
+     'wrapAround': true,//グループ最後の写真の矢印をクリックしたらグループ最初の写真に戻る
+     'albumLabel': ' %1 / total %2 ',//合計枚数中現在何枚目かというキャプションの見せ方を変更できる
+     'showImageNumberLabel': false  //false の場合、現在の画像番号とセット内の画像の総数を示すテキスト (例: "image 2 of 4") が非表示にできる
+   });
 
 
-// bodyタグを取得
-const documentBody = document.querySelector('body');
-// body直下に上部のカーテン
-var newElement1 = document.createElement("div");
-newElement1.setAttribute("class","topCurtainbg");
-documentBody.prepend(newElement1);
-// body直下に下部のカーテン
-var newElement2 = document.createElement("div");
-newElement2.setAttribute("class","bottomCurtainbg");
-documentBody.prepend(newElement2);
+//timelapsのjs
+jQuery(function($){
+  var movie = document.getElementById("background-video");
+  movie.controls = false;
+    var movie = document.getElementById("timelapse-ditails");
+    movie.controls = false;
+    });
 
 
-// bodyタグにclassを付与
-documentBody.classList.add('pageOn');
 
-// 1.5秒経ったらオーバーレイ非表示
-setTimeout(function(){ 
-    newElement1.style.display = "none";
-    newElement2.style.display = "none";
-  }, 1500);
 
-// ページ遷移時にフェードアウト
-window.addEventListener("beforeunload", () => {
-  documentBody.classList.add('fadeout');
-  setTimeout(function(){ 
-    documentBody.style.display = "none";
-  }, 1000);
-}, false);
+// mapのjs
+var map = L.map('map').setView([51.505, -0.09], 13);
 
-let lat = 35.7100069; // 緯度
-let lng = 139.8108103; // 経度
-let zoom = 16; // ズームレベル
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
 
-let map = L.map("map"); // 地図の生成
-map.setView([lat, lng], zoom); // 緯度経度、ズームレベルを設定する
 
-// タイルレイヤを生成し、地図に追加する
-// 今回はOpenStreetMapを表示する
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 
-  {
-    // 著作物の表示
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }
-).addTo(map);
+// window.onload = function() {
+
+  // div要素のid
+  // var map = L.map('map');
+
+  // 中心の緯度・経度とズームレベルを指定
+  // map.setView([35, 136], 5);
+
+  //表示するタイルレイヤのURLとAttributionコントロールを設定
+//   L.tileLayer(
+//     // OpenStreetMap を利用
+//     'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' , {
+//       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+//   }).addTo(map);
+
+//   /* 地理院タイル を利用する場合
+//   L.tileLayer(
+//      'https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png',{
+//         attribution: "<a href='https://maps.gsi.go.jp/development/ichiran.html' target='_blank'>地理院タイル</a>"
+//   }).addTo(map);
+//   */
+
+//   L.marker([ 33.66983627668292, 130.44487416744232 ] ).addTo(map)
+//     .bindPopup('Kyushu Sangyo University')
+//     .openPopup();
+
+// }

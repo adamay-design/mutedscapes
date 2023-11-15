@@ -30,8 +30,10 @@ header {
     padding: 0;
     position: fixed;
     display: flex;
-    background-color: rgba(255,255,255,0.85);
-    backdrop-filter: blur(6px);
+    background-color: rgba(255, 255, 255, 0.7); /* ガラスの色と透明度を設定 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* ガラスの影の効果を追加 */
+    backdrop-filter: blur(5px); /* フィルターを使って背後の要素をぼかす効果を追加 */
+    border: 1 solid rgba(255, 255, 255, 0.8); /* ガラスの境界線を追加 */
 }
 
 nav{
@@ -75,7 +77,7 @@ nav{
 .main-menu ul li a {
 	height: 70px;
     vertical-align:middle;
-    color:#000;
+    color:rgba(0, 0, 0, 0.8);
     text-decoration:none;
     letter-spacing:.1em;
 	padding: 10px 10px;
@@ -122,19 +124,16 @@ Index HTMLのためのcss
     opacity: .3;
 }
 
-.video video{
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+.video video {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     .video{
         min-width: 480px;
     }
@@ -143,7 +142,8 @@ Index HTMLのためのcss
 #swiper-container{
     width: 100%;
     top: 100vh;
-    background-color: rgba(255,255,255,0.85);
+    background-color: rgba(255,255,255,0.75);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影の設定 */
     backdrop-filter: blur(6px);
     overflow: hidden; /* 横スクロールを防ぐ */
 }
@@ -156,12 +156,13 @@ Index HTMLのためのcss
 
 .overview{
     margin: 0 auto;
-    width: 1000px;
+    width: 960px;
     height: 100vh;
 }
 
 .ov-text-container{
     height: 100vh;
+    padding: 0 20px 20px 0;
     display: table-cell;
     vertical-align: middle;
 }
@@ -179,6 +180,7 @@ Index HTMLのためのcss
     line-height: 1.8;
     letter-spacing: 0.03em;
     margin-bottom: 30px;
+    display: inline-block;
 }
 
 a.btn_01 {
@@ -205,7 +207,9 @@ a.btn_01:hover {
 
 .photo-intro{
     width: 100%;
-    height: 100vh;
+    height: 80vh;
+    display: grid;
+    place-items: center;
 }
 .inner-s {
     margin: 0 auto;
@@ -222,13 +226,15 @@ a.btn_01:hover {
     object-fit:cover;
 }
 .text-container-s{
-    width: 46%;
+    width: 47%;
     margin-right: 2rem;
     display: table-cell;
 }
 .timelapse-intro{
     width: 100%;
-    height: 100vh;
+    height: 80vh;
+    display: grid;
+    place-items: center;
 }
 .inner-t {
     margin: 0 auto;
@@ -236,7 +242,7 @@ a.btn_01:hover {
     display: flex;
 }
 .text-container-t{
-    width: 46%;
+    width: 47%;
     margin-right: 2rem;
     display: table-cell;
 }
@@ -256,13 +262,14 @@ a.btn_01:hover {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
 .overview{
     margin: auto 30px;
+    max-width: 420px;
     height: 100dvh;
 }
 .ov-text-container{
-    width: 380px;
+    width: 100%;
     padding: 0 20px 20px 0;
     display: table-cell;
     vertical-align: middle;
@@ -281,8 +288,14 @@ a.btn_01:hover {
     line-height: 1.7;
     text-align: justify;
     margin-bottom: 20px;
+    word-wrap: break-word;
 }
-
+.photo-intro{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
 .inner-s {
     max-width: 380px;
     margin: auto 30px;
@@ -347,11 +360,11 @@ aboutのためのcss
     display: table-cell;
 }
 .img-container {
-    width: 50%;
+    width: 43%;
     height: auto;
 }
 .img-container img{
-    max-width: 400px;
+    max-width: 430px;
     height: auto;
     object-fit:cover;
 }
@@ -377,7 +390,7 @@ aboutのためのcss
     margin-bottom: 30px;
 }
 
-@media (max-width: 768px){
+@media (max-width: 480px){
     .about {
         margin-top: 100px;
     }
@@ -424,8 +437,32 @@ aboutのためのcss
 timelapseのためのcss
 ===================================*/
 
+.tl-container {
+    display: flex;
+    justify-content: center; /* 左右中央揃え */
+    align-items: center;
+    margin: 0 20px; /* 左右の余白 */
+  }
+
+.tl-card-container {
+    margin: 80px 0 80px ;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .tl-card {
+    width: 300px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7); /* 色と透明度 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* 影 */
+    border: 1 solid rgba(255, 255, 255, 0.8); /* 境界線 */
+    backdrop-filter: blur(5px); /* ぼかし */
+    border-radius: 1px;
+  }  
+
 .contents{
-    padding: 0 180px 40px;
+    padding: 0 140px 60px;
     background-color: #FFF;
 }
 
@@ -441,7 +478,7 @@ timelapseのためのcss
     font-family: 'Noto Sans JP', sans-serif;
 }
 
-.youtube-container iframe {
+.youtube-container video {
     position: absolute;
     top: 0;
     left: 0;
@@ -463,12 +500,34 @@ timelapseのためのcss
    text-align: left;
    color: #FFF;
 }
-
-.details {
+details {
+    /* border: 1px solid #aaa; */
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+  }
+  
+  summary {
+    font-weight: bold;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+  }
+  
+  details[open] {
+    padding: 0.5em;
+  }
+/* .details {
     margin-bottom: 30px;
-}
+} */
 
-.details p {
+summary p {
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    color: #909090;
+}
+details p {
    line-height: 1.7;
    text-align: justify;
    margin-bottom: 0;
@@ -485,17 +544,19 @@ timelapseのためのcss
     
 }
 
+
+
 /*==================================================
 ギャラリーのためのcss
 ===================================*/
 .gallery{
     columns: 4;/*段組みの数*/
-    padding: 10px;/*ギャラリー左右に余白をつける*/
+    padding: 15px;/*ギャラリー左右に余白をつける*/
     margin-top: 80px;
 }
 
 .gallery li {
-  margin-bottom:10px;/*各画像下に余白をつける*/
+  margin-bottom:15px;/*各画像下に余白をつける*/
   list-style:none;
 }
 
@@ -522,10 +583,11 @@ timelapseのためのcss
 /*==================================================
 mapのためのcss
 ===================================*/
-
-#map {
-    height: 180px;
-}
+  #map {
+    width: 800px;
+    height: 600px;
+    margin: auto;
+  }
 
 /**********************************　
 以下、ハンバーガーメニューの設定　
@@ -549,9 +611,9 @@ body{
 
 .logo{
 	display: block;
-	width: 250px;
+	width: 200px;
 	position: fixed;
-	top: 21px;
+	top: 20px;
 	left: 30px;
 }
 
@@ -573,27 +635,27 @@ body{
 
 .icon span {
     position: absolute;       /*親要素である#hamburgerを基準に位置を指定*/
-	top: 20px;
+	top: 21px;
 	right: 10px;               /*#hamburger内の左がら15pxに横線を配置（幅が60pxなので右からも15px）*/
     width: 30px;              /*横線の幅*/
-    height: 3px;              /*横線の高さ*/
+    height: 2px;              /*横線の高さ*/
     background-color: #000;  /*横線を白色*/
     transition: ease 0.5s;   /*変化の時間（easeは初期値）*/
 }
 
 .icon span:nth-of-type(1) {
-    top: 16px;
+    top: 13px;
 }
 .icon span:nth-of-type(2) {
-    top: 28px;
+    top: 23px;
 }
 .icon span:nth-of-type(3) {
-    top: 40px;
+    top: 33px;
 }
 
 .close span:nth-of-type(1) {
     transform: rotate(45deg); /*反時計回りに45度回転*/
-    top: 28px;
+    top: 23px;
 }
 
 .close span:nth-of-type(2) {
@@ -602,17 +664,20 @@ body{
 
 .close span:nth-of-type(3) {
 	transform: rotate(-45deg); /*時計回りに45度回転*/
-	top: 28px;
+	top: 23px;
 }
 
 .hamburger-list {
     z-index: 19;
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
     font-size:20px;
-    top: 75px;  /*headerの余白分　ヘッダーには左右に15px余白があるので、headerの子要素となる.hamburger-listは15px分内側に設置されます。その余白を埋めるために左に寄せる。*/
+    top: 70px;  /*headerの余白分　ヘッダーには左右に15px余白があるので、headerの子要素となる.hamburger-listは15px分内側に設置されます。その余白を埋めるために左に寄せる。*/
     position: absolute; /*絶対配置　top　leftからの位置を絶対配置する*/
     height: 100dvh;
     background: #000;
+    background-color: rgba(42, 86, 120, 0.7); /* ガラスの色と透明度を設定 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* ガラスの影の効果*/
+    backdrop-filter: blur(10px); /* フィルターを使って背後の要素をぼかす効果 */
 }
 
 .hamburger-list ul li {
@@ -652,23 +717,32 @@ ul {
 }
 
 .wrapper{
-    min-height: 15vh;
     position: relative;/*←相対位置*/
     padding-bottom: 80px;/*←footerの高さ*/
     box-sizing: border-box;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.7); /* ガラスの色と透明度を設定 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* ガラスの影の効果を追加 */
+    backdrop-filter: blur(5px); /* フィルターを使って背後の要素をぼかす効果を追加 */
+    border: 1 solid rgba(255, 255, 255, 0.8); /* ガラスの境界線を追加 */
 }
 
-.wrapper p{
+.wrapper footer {
+    display: flex;
+    justify-content: center; /* 横方向中央揃え */
+    align-items: center; /* 縦方向中央揃え */
+  }
+  
+  .wrapper p {
     color: #000;
-    text-align: center;
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
     font-size: 12px;
-}
+    margin: 0; /* デフォルトの余白を除去 */
+  }
+
 
 footer{
     width: 100%;
-    padding: 20px 0;
-    position: absolute;/*←絶対位置*/
+    padding: 32px 0;
+    position: absolute;
     bottom: 0; /*下に固定*/
 }

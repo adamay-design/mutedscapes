@@ -3,21 +3,15 @@
 
   <head>
     <meta charset="UTF-8">
-    <script src="./js/jquery-3.7.0.min.js"></script>
+    <script src="./js/jquery-3.7.0.min.js"></script> <!—jQueryのファイルの読み込み—>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
+    <link href="./css/all.min.css" rel="stylesheet" >
+    <link href="./css/style.css" rel="stylesheet" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
-    <link href="./css/all.min.css" rel="stylesheet" >
-    <link href="./css/style.css" rel="stylesheet" >
-    <script src ="./js/script.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Map - Mutedscapes</title>
+    <title>TimeLapse - Mutedscapes</title>
   </head>
 
   <body>
@@ -73,15 +67,38 @@
 
     </header>
 
-      <main>
-        <div id="map"></div>
-      </main>
+    <main>
+      <article>
+          <div class="contents">
+            <div class="title-container">
+              <h1>福岡ダイヤモンドビル</h1>
+            </div>
+            <div class="youtube-container">
+                <video id="timelapse-ditails" src="video/fukuoka-db1.mp4" autoplay="autoplay" loop="loop"></video>       
+            </div>
+            <!-- <div class="details">
+              <p>機材：Sony α7Ⅲ</p>
+              <p>設定：ISO 400, 69mm, f/13</p>
+              <p>日時：2023年11月12日 00:00-00:00</p>
+              <p>場所：〒810-0001 福岡県福岡市中央区天神1丁目12−7</p>
+            </div> -->
+          <details>
+            <summary><p>詳細はこちら</p></summary>
+            <p>機材：Sony α7Ⅲ</p>
+            <p>設定：ISO 400, 69mm, f/13</p>
+            <p>日時：2023年11月12日 00:00-00:00</p>
+            <p>場所：〒810-0001 福岡県福岡市中央区天神1丁目12−7</p>
+          </details>
+        </div>
 
-      <div class="wrapper">
-        <footer>
-          <p>&copy;2023 Mutedscapes</p>
-        </footer>
-      </div>
-      
+      </article>
+    </main>
+
+    <div class="wrapper">
+      <footer>
+        <p>&copy;2023 Mutedscapes</p>
+      </footer>
+    </div>
+
   </body>
 </html>
