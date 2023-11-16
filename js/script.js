@@ -1,31 +1,51 @@
-//lightbox オプションの設定※https://lokeshdhakar.com/projects/lightbox2/#options参照
 
- lightbox.option({
-     'wrapAround': true,//グループ最後の写真の矢印をクリックしたらグループ最初の写真に戻る
-     'albumLabel': ' %1 / total %2 ',//合計枚数中現在何枚目かというキャプションの見せ方を変更できる
-     'showImageNumberLabel': false  //false の場合、現在の画像番号とセット内の画像の総数を示すテキスト (例: "image 2 of 4") が非表示にできる
-   });
 
 
 //timelapsのjs
 jQuery(function($){
-  var movie = document.getElementById("background-video");
-  movie.controls = false;
-    var movie = document.getElementById("timelapse-ditails");
-    movie.controls = false;
-    });
+   var bg_movie = document.getElementById("background-video");
+    bg_movie.controls = false;
+   var tl_movie = document.getElementById("timelapse-ditails");
+    tl_movie.controls = false;
+});
 
 
+window.onload = function() {
 
 
-// mapのjs
-var map = L.map('map').setView([51.505, -0.09], 13);
+  // lightbox オプションの設定※https://lokeshdhakar.com/projects/lightbox2/#options参照
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
+  lightbox.option({
+    'wrapAround': true,//グループ最後の写真の矢印をクリックしたらグループ最初の写真に戻る
+    'albumLabel': ' %1 / total %2 ',//合計枚数中現在何枚目かというキャプションの見せ方を変更できる
+    'showImageNumberLabel': false  //false の場合、現在の画像番号とセット内の画像の総数を示すテキスト (例: "image 2 of 4") が非表示にできる
+  });
 
+
+  // map が存在する場合の処理
+
+  var obj = document.getElementById('map');
+
+  if(obj==null){
+
+     // Do Nothing
+
+  }else{
+
+    var map = L.map('map');
+    map.setView([51.505, -0.09], 13);
+
+    L.tileLayer(
+        'https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+  }
+
+    // nothing to do
+
+}
 
 // window.onload = function() {
 
