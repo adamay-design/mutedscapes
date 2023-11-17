@@ -584,9 +584,9 @@ details p {
 mapのためのcss
 ===================================*/
   #map {
+    margin: 150px auto;
     width: 800px;
     height: 600px;
-    margin: auto;
   }
 
 /**********************************　

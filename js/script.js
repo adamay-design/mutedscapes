@@ -33,7 +33,7 @@ window.onload = function() {
   }else{
 
     var map = L.map('map');
-    map.setView([51.505, -0.09], 13);
+    map.setView([33.619837, 130.367861], 12);
 
     L.tileLayer(
         'https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
