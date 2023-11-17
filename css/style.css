@@ -99,6 +99,12 @@ nav{
     margin: 0 0 0 2px;
 }
 
+@media (min-width: 960px){
+    .hamburger-list ul{
+        display: none;
+    }
+}
+
 /*==================================================
 Index HTMLのためのcss
 ===================================*/
@@ -353,6 +359,7 @@ aboutのためのcss
     margin: 0 auto;
     width: 1000px;
     display: flex;
+    justify-content: space-between;
 }
 .text-container-a{
     width: 46%;
@@ -445,13 +452,14 @@ timelapseのためのcss
   }
 
 .tl-card-container {
-    margin: 80px 0 80px ;
+    margin: 150px 0 650px ;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
   }
   
-  .tl-card {
+.tl-card {
     width: 300px;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.7); /* 色と透明度 */
@@ -585,8 +593,24 @@ mapのためのcss
 ===================================*/
   #map {
     margin: 150px auto;
-    width: 800px;
+    width: 1000px;
     height: 600px;
+  }
+
+  @media (max-width: 768px) {
+    #map {
+        margin: 150px auto;
+        width: 500px;
+        height: 400px;
+      }
+  }
+
+  @media (max-width: 428px) {
+    #map {
+        margin: 150px auto;
+        width: 380px;
+        height: 300px;
+      }
   }
 
 /**********************************　

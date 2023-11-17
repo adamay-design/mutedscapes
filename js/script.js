@@ -33,7 +33,7 @@ window.onload = function() {
   }else{
 
     var map = L.map('map');
-    map.setView([33.619837, 130.367861], 12);
+    map.setView([33.619837, 130.367861], 12.1);
 
     L.tileLayer(
         'https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -41,6 +41,10 @@ window.onload = function() {
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
+
+    L.marker([33.670655, 130.444721],{title:"九州産業大学 2号館"}).addTo(map)
+    .bindPopup('<p>九州産業大学 2号館</p>')
+    .openPopup();
   }
 
     // nothing to do
