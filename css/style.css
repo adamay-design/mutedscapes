@@ -448,7 +448,7 @@ timelapseのためのcss
     display: flex;
     justify-content: center; /* 左右中央揃え */
     align-items: center;
-    margin: 0 20px; /* 左右の余白 */
+    margin: 0 100px; /* 左右の余白 */
   }
 
 .tl-card-container {
@@ -460,14 +460,28 @@ timelapseのためのcss
   }
   
 .tl-card {
-    width: 300px;
-    padding: 10px;
+    width: 450px;
+    padding: 12px;
     background-color: rgba(255, 255, 255, 0.7); /* 色と透明度 */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* 影 */
     border: 1 solid rgba(255, 255, 255, 0.8); /* 境界線 */
     backdrop-filter: blur(5px); /* ぼかし */
-    border-radius: 1px;
+    border-radius: 5px;
   }  
+
+.tl-card img{
+    width: 450px;
+}
+
+  .tl-card p {
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    color: #000;
+
+  }
 
 .contents{
     padding: 0 140px 60px;
@@ -535,15 +549,56 @@ timelapseのためのcss
 /*==================================================
 ギャラリーのためのcss
 ===================================*/
+
+.gallery-container{
+    margin-top: 100px;
+}
+.gallery-btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a.gallery-btn {
+    z-index: 0;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 1.5px solid #000;
+    box-sizing: border-box;
+    width: 140px;
+    height: 40px;
+    padding: 0;
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+    position: relative;
+    transition-duration: 0.2s;
+}
+a.gallery-btn:hover {
+  background: #000;
+  color: #FFF;
+}
+
+a.gallery-btn.active {
+    background: #000;
+    color: #FFF;
+  }
+
 .gallery{
+    margin-top: 15px;
     columns: 4;/*段組みの数*/
     padding: 15px;/*ギャラリー左右に余白をつける*/
-    margin-top: 80px;
 }
 
 .gallery li {
-  margin-bottom:15px;/*各画像下に余白をつける*/
-  list-style:none;
+    margin-right: 1%;/* 追加 */
+    list-style:none;/* 追加 */
+    animation: test .8s;/* 追加 */
+    margin-bottom:15px;/*各画像下に余白をつける*/
+    list-style:none;
 }
 
 /*ギャラリー内のイメージは横幅100%にする*/
@@ -569,10 +624,19 @@ timelapseのためのcss
 /*==================================================
 mapのためのcss
 ===================================*/
+
+.map-btn-container{
+    margin: 100px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
   #map {
-    margin: 150px auto;
+    margin: 30px auto;
     width: 1000px;
     height: 600px;
+    z-index: 1;
   }
 
   @media (max-width: 768px) {
@@ -719,6 +783,7 @@ ul {
 }
 
 .wrapper{
+    margin-top: 500px;
     position: relative;/*←相対位置*/
     padding-bottom: 80px;/*←footerの高さ*/
     box-sizing: border-box;
