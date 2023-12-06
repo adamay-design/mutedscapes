@@ -590,7 +590,7 @@ a.gallery-btn.active {
 .gallery{
     margin-top: 15px;
     columns: 4;/*段組みの数*/
-    padding: 15px;/*ギャラリー左右に余白をつける*/
+    padding: 15px 100px 0;/*ギャラリー左右に余白をつける*/
 }
 
 .gallery li {
