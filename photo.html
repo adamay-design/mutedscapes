@@ -1,156 +1,152 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-      <head>
+  <head>
 
-        <meta charset="UTF-8">
-        <script src="./js/jquery-3.7.0.min.js"></script>
-        <script src="./js/script.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-        <link href="./css/all.min.css" rel="stylesheet" >
-        <link href="./css/style.css" rel="stylesheet" >
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-        <script src="./js/script.js" defer></script>
-        <title>Photo - Mutedscapes</title>
-        <!--
-        <link rel="stylesheet" type="text/css" href="css/6-2-1.css">
-         -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      </head>
+    <!-- jQuery -->
+    <script src="./js/jquery-3.7.0.min.js"></script>
+    
+    <!-- Lightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
 
-      <body class="photo">
+    <!-- leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 
-      <header>
+    <!-- Fonts -->
+    <link href="./css/all.min.css" rel="stylesheet" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
 
-        <nav>
-          <a href="index.html" class="logo">
-            <img src="images/mutedscapes-logo-b.png">
-          </a>
-        </nav>
+    <!-- Mutedscapes Original -->
+    <script src="./js/script.js" defer></script>
+    <link href="./css/style.css" rel="stylesheet" >
 
-        <!--▽▽ハンバーガーメニュー▽▽-->
-        <div id="hamburger">
-            <div class="icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <script src="jquery-3.7.0.min.js"></script> <!—jQueryのファイルの読み込み—>
-        <script>
-          $('#hamburger').on('click', function(){
-              $('.icon').toggleClass('close');
-              $('.hamburger-list').slideToggle();
-          });
-        </script>
-        <!--△△ハンバーガーメニュー△△-->
+    <title>Photo - Mutedscapes</title>
 
-        <!--▽▽ハンバーガーメニューのリスト▽▽-->
-        <nav class="hamburger-list">
-          <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="timelapse.html">TimeLapse</a></li>
-            <li><a href="photo.html">Photo</a></li>
-            <li><a href="map.html">Map</a></li>
-            <li><a href="https://www.youtube.com/entry/mode=confirm&title={ページタイトル}&url={URL}" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
-          </ul>
-        </nav>
-        <!--△△ハンバーガーメニューのリスト△△-->
+  </head>
 
-        <!--▽▽ヘッダーリスト▽▽-->
-        <nav class="main-menu">
-          <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="timelapse.html">TimeLapse</a></li>
-            <li><a href="photo.html">Photo</a></li>
-            <li><a href="map.html">Map</a></li>
-            <li><a href="https://www.youtube.com/@mutedscapes/channels" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
-          </ul>
-        </nav>
-        <!--△△ヘッダーリスト△△-->
+  <body class="photo">
 
-      </header>
+    <header>
 
-      <main>
+      <nav>
+        <a href="index.html" class="logo">
+          <img src="images/mutedscapes-logo-b.png">
+        </a>
+      </nav>
 
-        
-        <article>
-
-          <div class="gallery-container">
-            
-            <div class="gallery-btn-container">
-              <a href="" class="gallery-btn" data-filter="all">ALL</a>
-              <a href="" class="gallery-btn" data-filter="Tenjin">Tenjin</a>
-              <a href="" class="gallery-btn" data-filter="Hakata">Hakata</a>
-              <a href="" class="gallery-btn" data-filter="etc.">etc.</a>
-            </div>
-
-            <ul class="gallery">
-              <li data-category="Tenjin"><a href="photo/DSC06992.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;39mm&emsp;f13&emsp;1/400s"><img src="photo/DSC06992.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC06914.jpg" data-lightbox="gallery1" data-title="ISO 640&emsp;70mm&emsp;f18&emsp;1/250s"><img src="photo/DSC06914.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC06901.jpg" data-lightbox="gallery1" data-title="ISO 640&emsp;70mm&emsp;f18&emsp;1/80s"><img src="photo/DSC06901.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC06889.jpg" data-lightbox="gallery1" data-title="ISO 640&emsp;24mm&emsp;f18&emsp;1/500s"><img src="photo/DSC06889.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC06871.jpg" data-lightbox="gallery1" data-title="ISO 640&emsp;59mm&emsp;f20&emsp;1/100s"><img src="photo/DSC06871.jpg" alt=""></a></li>
-              <li data-category="Hakata"><a href="photo/DSC04655.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;33mm&emsp;f8&emsp;1/320s"><img src="photo/DSC04655.jpg" alt=""></a></li>
-              <li data-category="Hakata"><a href="photo/DSC04649.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;70mm&emsp;f8&emsp;1/320s"><img src="photo/DSC04649.jpg" alt=""></a></li>
-              <li data-category="Hakata"><a href="photo/DSC04635.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;57mm&emsp;f9&emsp;1/200s"><img src="photo/DSC04635.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC04326.jpg" data-lightbox="gallery1" data-title="ISO 320&emsp;70mm&emsp;f6.3&emsp;1/800s"><img src="photo/DSC04326.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC04288.jpg" data-lightbox="gallery1" data-title="ISO 200&emsp;50mm&emsp;f13&emsp;1/60s"><img src="photo/DSC04288.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC04296.jpg" data-lightbox="gallery1" data-title="ISO 200&emsp;24mm&emsp;f13&emsp;1/80s"><img src="photo/DSC04296.jpg" alt=""></a></li>
-              <li data-category="Hakata"><a href="photo/DSC04200.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;61mm&emsp;f8&emsp;1/40s"><img src="photo/DSC04200.jpg" alt=""></a></li>
-              <li data-category="etc."><a href="photo/DSC04210.jpg" data-lightbox="gallery1" data-title="ISO 200&emsp;44mm&emsp;f18&emsp;1/40s"><img src="photo/DSC04210.jpg" alt=""></a></li>
-              <li data-category="etc."><a href="photo/DSC2076.jpg" data-lightbox="gallery1" data-title="ISO 200&emsp;44mm&emsp;f18&emsp;1/40s"><img src="photo/DSC2076.jpg" alt=""></a></li>
-              <li data-category="Hakata"><a href="photo/DSC04196.jpg" data-lightbox="gallery1" data-title="ISO 400 &emsp;51mm&emsp;f8&emsp;1/20s"><img src="photo/DSC04196.jpg" alt=""></a></li>
-              <li data-category="Hakata"><a href="photo/DSC04165.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;31mm&emsp;f13&emsp;1/125s"><img src="photo/DSC04165.jpg" alt=""></a></li>
-              <li data-category="Hakata"><a href="photo/DSC04141.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;41mm&emsp;f13&emsp;1/100s"><img src="photo/DSC04141.jpg" alt=""></a></li>
-              <li data-category="Hakata"><a href="photo/DSC02212.jpg" data-lightbox="gallery1" data-title="ISO 200&emsp;40mm&emsp;f9&emsp;1/320s"><img src="photo/DSC02212.jpg" alt=""></a></li>
-              <li data-category="etc."><a href="photo/DSC2070.jpg" data-lightbox="gallery1" data-title="ISO 320&emsp;70mm&emsp;f8.0&emsp;1/250s"><img src="photo/DSC2070.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC00164.jpg" data-lightbox="gallery1" data-title="ISO 320&emsp;70mm&emsp;f8&emsp;1/500s"><img src="photo/DSC00164.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC00170.jpg" data-lightbox="gallery1" data-title="ISO 320&emsp;70mm&emsp;f8&emsp;1/250s"><img src="photo/DSC00170.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC02048.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;67mm&emsp;f13&emsp;1/100s"><img src="photo/DSC02048.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC1916.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;37mm&emsp;f10&emsp;1/800s"><img src="photo/DSC1916.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC1878.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;62mm&emsp;f10&emsp;1/125s"><img src="photo/DSC1878.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC1943.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;67mm&emsp;f10&emsp;1/1000s"><img src="photo/DSC1943.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC1874.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;24mm&emsp;f10&emsp;1/400s"><img src="photo/DSC1874.jpg" alt=""></a></li>
-              <li data-category="Hakata"><a href="photo/DSC04204.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;70mm&emsp;f9&emsp;1/20s"><img src="photo/DSC04204.jpg" alt=""></a></li>
-              <li data-category="Hakata"><a href="photo/DSC04179.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;64mm&emsp;f13&emsp;1/13s"><img src="photo/DSC04179.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC00751.jpg" data-lightbox="gallery1" data-title="ISO 200&emsp;50mm&emsp;f5.6&emsp;1/250s"><img src="photo/DSC00751.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC00791.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;70mm&emsp;f14&emsp;1/250s"><img src="photo/DSC00791.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC01506.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;38mm&emsp;f6.3&emsp;1/80s"><img src="photo/DSC01506.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC00838.jpg" data-lightbox="gallery1" data-title="ISO 200&emsp;16mm&emsp;f5.6&emsp;1/1250s"><img src="photo/DSC00838.jpg" alt=""></a></li>
-              <li data-category="Hakata"><a href="photo/DSC07239.jpg" data-lightbox="gallery1" data-title="ISO 125&emsp;50mm&emsp;f9&emsp;1/160s"><img src="photo/DSC07239.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC01505.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;50mm&emsp;f8&emsp;1/500s"><img src="photo/DSC01505.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC00901.jpg" data-lightbox="gallery1" data-title="ISO 320&emsp;16mm&emsp;f9&emsp;1/400s"><img src="photo/DSC00901.jpg" alt=""></a></li>
-              <li data-category="Hakata"><a href="photo/DSC00933.jpg" data-lightbox="gallery1" data-title="ISO 320&emsp;44mm&emsp;f9&emsp;1/250s"><img src="photo/DSC00933.jpg" alt=""></a></li>
-              <li data-category="Hakata"><a href="photo/DSC00951.jpg" data-lightbox="gallery1" data-title="ISO 320&emsp;30mm&emsp;f9&emsp;1/40s"><img src="photo/DSC00951.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC00735.jpg" data-lightbox="gallery1" data-title="ISO 200&emsp;50mm&emsp;f5.6&emsp;1/640s"><img src="photo/DSC00735.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC00810.jpg" data-lightbox="gallery1" data-title="ISO 200&emsp;39mm&emsp;f5.6&emsp;1/800s"><img src="photo/DSC00810.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC00828.jpg" data-lightbox="gallery1" data-title="ISO 200&emsp;50mm&emsp;f5.6&emsp;1/160s"><img src="photo/DSC00828.jpg" alt=""></a></li>
-              <li data-category="Hakata"><a href="photo/DSC00893.jpg" data-lightbox="gallery1" data-title="ISO 320&emsp;40mm&emsp;f9&emsp;1/125s"><img src="photo/DSC00893.jpg" alt=""></a></li>
-              <li data-category="Hakata"><a href="photo/DSC00945.jpg" data-lightbox="gallery1" data-title="ISO 320&emsp;34mm&emsp;f9&emsp;1/320s"><img src="photo/DSC00945.jpg" alt=""></a></li>
-              <li data-category="Hakata"><a href="photo/DSC00950.jpg" data-lightbox="gallery1" data-title="ISO 320&emsp;30mm&emsp;f9&emsp;1/60s"><img src="photo/DSC00950.jpg" alt=""></a></li>
-              <li data-category="Tenjin"><a href="photo/DSC00790.jpg" data-lightbox="gallery1" data-title="ISO 200&emsp;47mm&emsp;f5.6&emsp;1/200s"><img src="photo/DSC00790.jpg" alt=""></a></li>
-            </ul>
+      <!--▽▽ハンバーガーメニュー▽▽-->
+      <div id="hamburger">
+          <div class="icon">
+              <span></span>
+              <span></span>
+              <span></span>
           </div>
-        </article>
-
-        <!--自作のJS-->
-        <script src="js/6-2-1.js"></script>
-            
-      </main>
-
-      <div class="wrapper">
-        <footer>
-          <p>&copy;2023 Mutedscapes</p>
-        </footer>
       </div>
+
+      <!--△△ハンバーガーメニュー△△-->
+
+      <!--▽▽ハンバーガーメニューのリスト▽▽-->
+      <nav class="hamburger-list">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="timelapse.html">TimeLapse</a></li>
+          <li><a href="photo.html">Photo</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="https://www.youtube.com/entry/mode=confirm&title={ページタイトル}&url={URL}" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+      </nav>
+      <!--△△ハンバーガーメニューのリスト△△-->
+
+      <!--▽▽ヘッダーリスト▽▽-->
+      <nav class="main-menu">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="timelapse.html">TimeLapse</a></li>
+          <li><a href="photo.html">Photo</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="https://www.youtube.com/@mutedscapes/channels" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
+        </ul>
+      </nav>
+      <!--△△ヘッダーリスト△△-->
+
+    </header>
+
+    <main>
+
+      <article>
+
+        <div class="gallery-container">
+          
+          <div class="gallery-btn-container">
+            <a href="" class="gallery-btn" data-filter="all">ALL</a>
+            <a href="" class="gallery-btn" data-filter="Tenjin">Tenjin</a>
+            <a href="" class="gallery-btn" data-filter="Hakata">Hakata</a>
+            <a href="" class="gallery-btn" data-filter="etc.">etc.</a>
+          </div>
+
+          <ul class="gallery">
+            <li data-category="Tenjin"><a href="photo/DSC06992.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;39mm&emsp;f13&emsp;1/400s"><img src="photo/DSC06992.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC06914.jpg" data-lightbox="gallery1" data-title="ISO 640&emsp;70mm&emsp;f18&emsp;1/250s"><img src="photo/DSC06914.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC06901.jpg" data-lightbox="gallery1" data-title="ISO 640&emsp;70mm&emsp;f18&emsp;1/80s"><img src="photo/DSC06901.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC06889.jpg" data-lightbox="gallery1" data-title="ISO 640&emsp;24mm&emsp;f18&emsp;1/500s"><img src="photo/DSC06889.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC06871.jpg" data-lightbox="gallery1" data-title="ISO 640&emsp;59mm&emsp;f20&emsp;1/100s"><img src="photo/DSC06871.jpg" alt=""></a></li>
+            <li data-category="Hakata"><a href="photo/DSC04655.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;33mm&emsp;f8&emsp;1/320s"><img src="photo/DSC04655.jpg" alt=""></a></li>
+            <li data-category="Hakata"><a href="photo/DSC04649.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;70mm&emsp;f8&emsp;1/320s"><img src="photo/DSC04649.jpg" alt=""></a></li>
+            <li data-category="Hakata"><a href="photo/DSC04635.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;57mm&emsp;f9&emsp;1/200s"><img src="photo/DSC04635.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC04326.jpg" data-lightbox="gallery1" data-title="ISO 320&emsp;70mm&emsp;f6.3&emsp;1/800s"><img src="photo/DSC04326.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC04288.jpg" data-lightbox="gallery1" data-title="ISO 200&emsp;50mm&emsp;f13&emsp;1/60s"><img src="photo/DSC04288.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC04296.jpg" data-lightbox="gallery1" data-title="ISO 200&emsp;24mm&emsp;f13&emsp;1/80s"><img src="photo/DSC04296.jpg" alt=""></a></li>
+            <li data-category="Hakata"><a href="photo/DSC04200.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;61mm&emsp;f8&emsp;1/40s"><img src="photo/DSC04200.jpg" alt=""></a></li>
+            <li data-category="etc."><a href="photo/DSC04210.jpg" data-lightbox="gallery1" data-title="ISO 200&emsp;44mm&emsp;f18&emsp;1/40s"><img src="photo/DSC04210.jpg" alt=""></a></li>
+            <li data-category="etc."><a href="photo/DSC2076.jpg" data-lightbox="gallery1" data-title="ISO 200&emsp;44mm&emsp;f18&emsp;1/40s"><img src="photo/DSC2076.jpg" alt=""></a></li>
+            <li data-category="Hakata"><a href="photo/DSC04196.jpg" data-lightbox="gallery1" data-title="ISO 400 &emsp;51mm&emsp;f8&emsp;1/20s"><img src="photo/DSC04196.jpg" alt=""></a></li>
+            <li data-category="Hakata"><a href="photo/DSC04165.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;31mm&emsp;f13&emsp;1/125s"><img src="photo/DSC04165.jpg" alt=""></a></li>
+            <li data-category="Hakata"><a href="photo/DSC04141.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;41mm&emsp;f13&emsp;1/100s"><img src="photo/DSC04141.jpg" alt=""></a></li>
+            <li data-category="Hakata"><a href="photo/DSC02212.jpg" data-lightbox="gallery1" data-title="ISO 200&emsp;40mm&emsp;f9&emsp;1/320s"><img src="photo/DSC02212.jpg" alt=""></a></li>
+            <li data-category="etc."><a href="photo/DSC2070.jpg" data-lightbox="gallery1" data-title="ISO 320&emsp;70mm&emsp;f8.0&emsp;1/250s"><img src="photo/DSC2070.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC00164.jpg" data-lightbox="gallery1" data-title="ISO 320&emsp;70mm&emsp;f8&emsp;1/500s"><img src="photo/DSC00164.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC00170.jpg" data-lightbox="gallery1" data-title="ISO 320&emsp;70mm&emsp;f8&emsp;1/250s"><img src="photo/DSC00170.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC02048.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;67mm&emsp;f13&emsp;1/100s"><img src="photo/DSC02048.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC1916.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;37mm&emsp;f10&emsp;1/800s"><img src="photo/DSC1916.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC1878.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;62mm&emsp;f10&emsp;1/125s"><img src="photo/DSC1878.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC1943.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;67mm&emsp;f10&emsp;1/1000s"><img src="photo/DSC1943.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC1874.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;24mm&emsp;f10&emsp;1/400s"><img src="photo/DSC1874.jpg" alt=""></a></li>
+            <li data-category="Hakata"><a href="photo/DSC04204.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;70mm&emsp;f9&emsp;1/20s"><img src="photo/DSC04204.jpg" alt=""></a></li>
+            <li data-category="Hakata"><a href="photo/DSC04179.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;64mm&emsp;f13&emsp;1/13s"><img src="photo/DSC04179.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC00751.jpg" data-lightbox="gallery1" data-title="ISO 200&emsp;50mm&emsp;f5.6&emsp;1/250s"><img src="photo/DSC00751.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC00791.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;70mm&emsp;f14&emsp;1/250s"><img src="photo/DSC00791.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC01506.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;38mm&emsp;f6.3&emsp;1/80s"><img src="photo/DSC01506.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC00838.jpg" data-lightbox="gallery1" data-title="ISO 200&emsp;16mm&emsp;f5.6&emsp;1/1250s"><img src="photo/DSC00838.jpg" alt=""></a></li>
+            <li data-category="Hakata"><a href="photo/DSC07239.jpg" data-lightbox="gallery1" data-title="ISO 125&emsp;50mm&emsp;f9&emsp;1/160s"><img src="photo/DSC07239.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC01505.jpg" data-lightbox="gallery1" data-title="ISO 400&emsp;50mm&emsp;f8&emsp;1/500s"><img src="photo/DSC01505.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC00901.jpg" data-lightbox="gallery1" data-title="ISO 320&emsp;16mm&emsp;f9&emsp;1/400s"><img src="photo/DSC00901.jpg" alt=""></a></li>
+            <li data-category="Hakata"><a href="photo/DSC00933.jpg" data-lightbox="gallery1" data-title="ISO 320&emsp;44mm&emsp;f9&emsp;1/250s"><img src="photo/DSC00933.jpg" alt=""></a></li>
+            <li data-category="Hakata"><a href="photo/DSC00951.jpg" data-lightbox="gallery1" data-title="ISO 320&emsp;30mm&emsp;f9&emsp;1/40s"><img src="photo/DSC00951.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC00735.jpg" data-lightbox="gallery1" data-title="ISO 200&emsp;50mm&emsp;f5.6&emsp;1/640s"><img src="photo/DSC00735.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC00810.jpg" data-lightbox="gallery1" data-title="ISO 200&emsp;39mm&emsp;f5.6&emsp;1/800s"><img src="photo/DSC00810.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC00828.jpg" data-lightbox="gallery1" data-title="ISO 200&emsp;50mm&emsp;f5.6&emsp;1/160s"><img src="photo/DSC00828.jpg" alt=""></a></li>
+            <li data-category="Hakata"><a href="photo/DSC00893.jpg" data-lightbox="gallery1" data-title="ISO 320&emsp;40mm&emsp;f9&emsp;1/125s"><img src="photo/DSC00893.jpg" alt=""></a></li>
+            <li data-category="Hakata"><a href="photo/DSC00945.jpg" data-lightbox="gallery1" data-title="ISO 320&emsp;34mm&emsp;f9&emsp;1/320s"><img src="photo/DSC00945.jpg" alt=""></a></li>
+            <li data-category="Hakata"><a href="photo/DSC00950.jpg" data-lightbox="gallery1" data-title="ISO 320&emsp;30mm&emsp;f9&emsp;1/60s"><img src="photo/DSC00950.jpg" alt=""></a></li>
+            <li data-category="Tenjin"><a href="photo/DSC00790.jpg" data-lightbox="gallery1" data-title="ISO 200&emsp;47mm&emsp;f5.6&emsp;1/200s"><img src="photo/DSC00790.jpg" alt=""></a></li>
+          </ul>
+        </div>
+      </article>
+          
+    </main>
+
+    <div class="wrapper">
+      <footer>
+        <p>&copy;2023 Mutedscapes</p>
+      </footer>
+    </div>
       
   </body>
 </html>
