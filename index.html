@@ -2,15 +2,31 @@
 <html lang="ja">
 
   <head>
+
     <meta charset="UTF-8">
-    <script src="./js/jquery-3.7.0.min.js"></script>
-    <script src="./js/script.js"></script>
-    <link href="./css/all.min.css" rel="stylesheet" >
-    <link href="./css/style.css" rel="stylesheet" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- jQuery -->
+    <script src="./js/jquery-3.7.0.min.js"></script>
+
+    <!-- Lightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
+
+    <!-- leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+    <!-- Fonts -->
+    <link href="./css/all.min.css" rel="stylesheet" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+    <!-- Mutedscapes Original -->
+    <script src="./js/script.js"></script>
+    <link href="./css/style.css" rel="stylesheet" >
+
     <title>Mutedscapes</title>
   </head>
 
@@ -31,12 +47,6 @@
           <span></span>
         </div>
       </div>
-      <script>
-        $('#hamburger').on('click', function(){
-        $('.icon').toggleClass('close');
-        $('.hamburger-list').slideToggle();
-        });
-      </script>
 <!--△△ハンバーガーメニュー△△-->
 
 <!--▽▽ハンバーガーメニューのリスト▽▽-->
@@ -102,34 +112,16 @@
             </div>
 
             <div class="slide-container">
-              <div class="mySlides active">
-                  <img class="slide" src="photo/DSC00901.jpg" alt="Slide 1">
+              <div class="slide-image">
+                  <img src="photo/DSC00901.jpg">
               </div>
-              <div class="mySlides">
-                  <img class="slide" src="photo/DSC00751.jpg" alt="Slide 2">
+              <div class="slide-image">
+                  <img src="photo/DSC00751.jpg">
               </div>
-              <div class="mySlides">
-                  <img class="slide" src="photo/DSC00790.jpg" alt="Slide 3">
+              <div class="slide-image">
+                  <img src="photo/DSC00790.jpg">
               </div>
             </div>
-        
-            <script>
-              let slideIndex = 0;
-              showSlides();
-          
-              function showSlides() {
-                  let slides = document.getElementsByClassName("mySlides");
-                  for (let i = 0; i < slides.length; i++) {
-                      slides[i].style.opacity = 0;
-                  }
-                  slideIndex++;
-                  if (slideIndex > slides.length) {
-                      slideIndex = 1;
-                  }
-                  slides[slideIndex - 1].style.opacity = 1;
-                  setTimeout(showSlides, 5000); // Change image every 5 seconds
-              }
-            </script>
 
           </div>
 
@@ -165,4 +157,7 @@
         </div>
 
   </body>
+  <script>
+
+  </script>
 </html>

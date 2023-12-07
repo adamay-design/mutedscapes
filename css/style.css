@@ -222,15 +222,27 @@ a.btn_01:hover {
     width: 1000px;
     display: flex;
 }
+
+
+/****** Slide Container **********/
 .slide-container {
-    width: 50%;
-    height: auto;
+  position:relative;
+  width: 50%;
+  height: auto;
 }
-.slide{
-    max-width: 500px;
-    height: auto;
-    object-fit:cover;
+.slide-image {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
+.slide-image img {
+  width: 100%;
+  height: 100%;
+}
+/***********************************/
+
 .text-container-s{
     width: 47%;
     margin-right: 2rem;
@@ -484,7 +496,7 @@ timelapseのためのcss
   }
 
 .contents{
-    padding: 0 140px 60px;
+    padding: 0 210px 60px;
     background-color: #FFF;
 }
 
