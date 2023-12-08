@@ -141,7 +141,7 @@ Index HTMLのためのcss
 
 @media screen and (max-width: 768px) {
     .video{
-        min-width: 480px;
+        min-width: 375px;
     }
     }
 
@@ -160,10 +160,15 @@ Index HTMLのためのcss
     background-color: transparent;
 }
 
-.overview{
-    margin: 0 auto;
-    width: 960px;
+.overview-intro{
+    width: 100%;
     height: 100vh;
+    place-items: center;
+}
+
+.inner-o{
+    margin: 0 auto;
+    width: 1000px;
 }
 
 .ov-text-container{
@@ -175,14 +180,14 @@ Index HTMLのためのcss
 
 .ov-text1{
     color: #000;
-    font-size: 2rem;
+    font-size: 2.1rem;
     line-height: 1.7;
     margin-bottom: 20px;
 }
 
 .ov-text2{
     color: #000;
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.8;
     letter-spacing: 0.03em;
     margin-bottom: 30px;
@@ -192,6 +197,7 @@ Index HTMLのためのcss
 a.btn_01 {
     z-index: 0;
     display: flex;
+    margin-bottom: 10px;
     justify-content: center;
     align-items: center;
     background: transparent;
@@ -205,6 +211,7 @@ a.btn_01 {
     text-decoration: none;
     position: relative;
     transition-duration: 0.2s;
+
 }
 a.btn_01:hover {
   background: #000;
@@ -213,10 +220,11 @@ a.btn_01:hover {
 
 .photo-intro{
     width: 100%;
-    height: 80vh;
+    height: 60vh;
     display: grid;
     place-items: center;
 }
+
 .inner-s {
     margin: 0 auto;
     width: 1000px;
@@ -229,6 +237,9 @@ a.btn_01:hover {
   position:relative;
   width: 50%;
   height: auto;
+  margin: -70px auto; /* 中央揃え */
+  display: grid;
+  place-items: center; /* コンテンツを中央揃え */
 }
 .slide-image {
   display: none;
@@ -250,9 +261,10 @@ a.btn_01:hover {
 }
 .timelapse-intro{
     width: 100%;
-    height: 80vh;
+    height: 60vh;
     display: grid;
     place-items: center;
+    margin-bottom: 150px;
 }
 .inner-t {
     margin: 0 auto;
@@ -267,11 +279,18 @@ a.btn_01:hover {
 .timelapse-container {
     width: 50%;
     height: auto;
+    margin: -25px auto; /* 中央揃え */
+    display: grid;
+    place-items: center; /* コンテンツを中央揃え */
 }
 .timelapse-container video{
     max-width: 500px;
     height: auto;
     object-fit:cover;
+}
+
+.sp_br{
+    display: none;
 }
 
 @keyframes slide-flow {
@@ -280,15 +299,23 @@ a.btn_01:hover {
 }
 
 
-@media (max-width: 480px) {
-.overview{
-    margin: auto 30px;
-    max-width: 420px;
-    height: 100dvh;
+@media (max-width: 428px) {
+
+.overview-intro{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+}
+.inner-o{
+    max-width: 380px;
+    width: 80%;
+    display: block;
 }
 .ov-text-container{
     width: 100%;
-    padding: 0 20px 20px 0;
+    padding: 0;
     display: table-cell;
     vertical-align: middle;
 }
@@ -304,19 +331,27 @@ a.btn_01:hover {
     color: #000;
     font-size: 1rem;
     line-height: 1.7;
-    text-align: justify;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     word-wrap: break-word;
 }
+.ov-text2 span{
+    display: inline-block;
+}
+
+.ov-text2 br{
+    margin-bottom: 10px;
+}
+
 .photo-intro{
     width: 100%;
     height: 100vh;
+    margin: 0;
     display: grid;
     place-items: center;
 }
 .inner-s {
     max-width: 380px;
-    margin: auto 30px;
+    width: 80%;
     display: block;
 }
 .text-container-s{
@@ -333,7 +368,7 @@ a.btn_01:hover {
 }
 .inner-t {
     max-width: 380px;
-    margin: auto 30px;
+    width: 80%;
     display: block;
 }
 .text-container-t{
@@ -344,10 +379,10 @@ a.btn_01:hover {
     margin: 30px 20px auto 0
 }
 .timelapse-container video{
-    max-width: 380px;
-    height: auto;
+    width:100%;
     object-fit:cover;
 }
+
 }
 
 .hamburger-list {
@@ -379,11 +414,11 @@ aboutのためのcss
     display: table-cell;
 }
 .img-container {
-    width: 43%;
+    width: 48%;
     height: auto;
 }
 .img-container img{
-    max-width: 430px;
+    max-width: 100%;
     height: auto;
     object-fit:cover;
 }
@@ -409,7 +444,7 @@ aboutのためのcss
     margin-bottom: 30px;
 }
 
-@media (max-width: 480px){
+@media (max-width: 428px){
     .about {
         margin-top: 100px;
     }
@@ -434,7 +469,7 @@ aboutのためのcss
     }
     .inner-a {
         max-width: 380px;
-        margin: auto 30px;
+        width: 80%;
         display: block;
     }
     .text-container-a{
@@ -472,7 +507,7 @@ timelapseのためのcss
   }
   
 .tl-card {
-    width: 450px;
+    width: 37.5%;
     padding: 12px;
     background-color: rgba(255, 255, 255, 0.7); /* 色と透明度 */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* 影 */
@@ -482,7 +517,7 @@ timelapseのためのcss
   }  
 
 .tl-card img{
-    width: 450px;
+    width: 100%;
 }
 
   .tl-card p {
@@ -548,12 +583,40 @@ timelapseのためのcss
    color: #909090;
 }
 
-@media (max-width: 768px){
-    .contents{
-        padding: 0 50px 40px;
-        background-color: #FFF;
+@media (max-width: 1200px){
+    .tl-container{
+        min-width: 429px;
+        margin: 0;
     }
-    
+    .tl-card-container {
+        margin: 100px 0 60px ;
+      }
+    .tl-card {
+        width: 80%;
+    }
+    .contents{
+        padding: 0 100px 210px;
+        min-width: 375px;
+    }
+
+}
+
+@media (max-width: 428px){
+    .tl-container{
+        min-width: 375px;
+        margin: 0;
+    }
+    .tl-card-container {
+        margin: 100px 0 60px ;
+      }
+    .tl-card {
+        width: 80%;
+    }
+    .contents{
+        padding: 0 20px 210px;
+        min-width: 375px;
+    }
+
 }
 
 
@@ -606,10 +669,10 @@ a.gallery-btn.active {
 }
 
 .gallery li {
-    margin-right: 1%;/* 追加 */
-    list-style:none;/* 追加 */
-    animation: test .8s;/* 追加 */
-    margin-bottom:15px;/*各画像下に余白をつける*/
+    margin-right: 0%;
+    list-style:none;
+    animation: test .8s;
+    margin-bottom:15px;
     list-style:none;
 }
 
@@ -622,14 +685,32 @@ a.gallery-btn.active {
 
 /*　横幅900px以下の段組み設定　*/
 @media only screen and (max-width: 900px) {
+    .gallery-container{
+        margin-top: 80px;
+    }
     .gallery{
       columns:3;
+      padding: 15px 20px 0;
+    }
+    .gallery-btn-container{
+        padding: 0 10px;
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 428px) {
+    .gallery-container{
+        margin-top: 80px;
+    }
     .gallery{
-      columns: 2;
+      columns: 1;
+      padding: 10px 20px 0;
+    }
+    .gallery-btn-container{
+        padding: 0 10px;
+    }
+
+    a.gallery-btn {
+        margin: 0 10px;
     }
 }
 
@@ -653,7 +734,7 @@ mapのためのcss
 
   @media (max-width: 768px) {
     #map {
-        margin: 150px auto;
+        margin: 80px auto;
         width: 500px;
         height: 400px;
       }
@@ -661,8 +742,7 @@ mapのためのcss
 
   @media (max-width: 428px) {
     #map {
-        margin: 150px auto;
-        width: 380px;
+        min-width: 375px;
         height: 300px;
       }
   }
@@ -674,9 +754,23 @@ mapのためのcss
 @media (max-width: 960px) {
 
 body{
-    margin: 0;
-    min-width:450px;
+    min-width:375px;
     background:#FFF;
+}
+
+.overview-intro{
+    margin: 0;
+    height: 82dvh;
+}
+
+.photo-intro{
+    margin: 60px 0 0x;
+    height: 80dvh;
+}
+
+.timelapse-intro{
+    margin: 100px 0 60px;
+    height: 80dvh;
 }
 
 .main-menu {
@@ -687,27 +781,36 @@ body{
     display: none;
 }
 
-.logo{
-	display: block;
-	width: 200px;
-	position: fixed;
-	top: 20px;
-	left: 30px;
+header {
+    height: 55px;
+    display: flex;
+    justify-content: center; /* 横方向中央揃え */
+    align-items: center; /* 縦方向中央揃え */
+}
+
+.nav{
+    height: 55px;
+}
+
+.logo {
+    display: block;
+    width: 150px;
 }
 
 .logo img{
-    width:90%;
+    width:100%;
     height:auto;
+    margin-left: -20px;
 }
 
 #hamburger {
     background-color: transparent;  /*透明の背景*/
     position: absolute;             /*ハンバーガーの横線の位置を決めるための基準*/
     cursor: pointer;                /*リンクを示すカーソルを表示（指差しマーク）*/
-	top: 10px;
-	right: 10px;
-    height: 40px;
-	width: 40px;                    /*高さと同じ幅*/
+	top: 4px;
+	right: 15px;
+    height: 44px;
+	width: 44px;                    /*高さと同じ幅*/
     z-index: 20;
 }
 
@@ -715,7 +818,7 @@ body{
     position: absolute;       /*親要素である#hamburgerを基準に位置を指定*/
 	top: 21px;
 	right: 10px;               /*#hamburger内の左がら15pxに横線を配置（幅が60pxなので右からも15px）*/
-    width: 30px;              /*横線の幅*/
+    width: 25px;              /*横線の幅*/
     height: 2px;              /*横線の高さ*/
     background-color: #000;  /*横線を白色*/
     transition: ease 0.5s;   /*変化の時間（easeは初期値）*/
@@ -749,7 +852,7 @@ body{
     z-index: 19;
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
     font-size:20px;
-    top: 70px;  /*headerの余白分　ヘッダーには左右に15px余白があるので、headerの子要素となる.hamburger-listは15px分内側に設置されます。その余白を埋めるために左に寄せる。*/
+    top: 55px;  /*headerの余白分　ヘッダーには左右に15px余白があるので、headerの子要素となる.hamburger-listは15px分内側に設置されます。その余白を埋めるために左に寄せる。*/
     position: absolute; /*絶対配置　top　leftからの位置を絶対配置する*/
     height: 100dvh;
     background: #000;
@@ -795,7 +898,6 @@ ul {
 }
 
 .wrapper{
-    margin-top: 500px;
     position: relative;/*←相対位置*/
     padding-bottom: 80px;/*←footerの高さ*/
     box-sizing: border-box;

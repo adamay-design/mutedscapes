@@ -44,7 +44,7 @@ $(function(){
   lightbox.option({
       'wrapAround': true,//グループ最後の写真の矢印をクリックしたらグループ最初の写真に戻る
       'albumLabel': ' %1 / total %2 ',//合計枚数中現在何枚目かというキャプションの見せ方を変更できる
-      'showImageNumberLabel': false,  //false の場合、現在の画像番号とセット内の画像の総数を示すテキスト (例: "image 2 of 4") が非表示にできる
+      'showImageNumberLabel': true,  //false の場合、現在の画像番号とセット内の画像の総数を示すテキスト (例: "image 2 of 4") が非表示にできる
       'alwaysShowNavOnTouchDevices':  true //true時、スマホ閲覧で左右の矢印を常に表示
   });
 
@@ -95,28 +95,38 @@ $(function(){
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
+    var popupContent = '<div style="max-width: 500px;"><img src="images/ksu-bldg2.jpg" alt="Image" style="width: 200px; height: auto;"></div>';
     L.marker([33.670655, 130.444721],{title:"九州産業大学 2号館"}).addTo(map)
-    .bindPopup('<p>九州産業大学 2号館</p>')
-    .openPopup();
-    L.marker([33.591796023990646, 130.40053679829194],{title:"天神ビジネスセンター"}).addTo(map)
-    .bindPopup('<p>天神ビジネスセンター</p>')
-    .openPopup();
-    L.marker([33.59197591938904, 130.4032882343487],{title:"アクロス福岡"}).addTo(map)
-    .bindPopup('<p>アクロス福岡</p>')
-    .openPopup();
-    L.marker([33.59254288492705, 130.40356137517006],{title:"AQUA HAKATA"}).addTo(map)
-    .bindPopup('<p>AQUA HAKATA</p>')
-    .openPopup();
-    L.marker([33.5880221289339, 130.39915365055128],{title:"ソラリアターミナルビル"}).addTo(map)
-    .bindPopup('<p>ソラリアターミナルビル</p>')
-    .openPopup();
-    L.marker([33.591575065574865, 130.3986365156948],{title:"福岡ダイヤモンドビル"}).addTo(map)
-    .bindPopup('<p>福岡ダイヤモンドビル</p>')
+    .bindPopup('<p><a href="https://adamay-design.github.io/mutedscapes/ksu-bldg2.html">九州産業大学 2号館</a><br>' + popupContent + '</p>')
     .openPopup();
 
-    map.setView([33.591796023, 130.400536798], 14);
+    var popupContent = '<div style="max-width: 500px;"><img src="images/tenjin-bc.jpg" alt="Image" style="width: 200px; height: auto;"></div>';
+    L.marker([33.591796023990646, 130.40053679829194],{title:"天神ビジネスセンター"}).addTo(map)
+    .bindPopup('<p><a href="https://adamay-design.github.io/mutedscapes/tenjin-bc.html">天神ビジネスセンター</a><br>' + popupContent + '</p>')
+    .openPopup();
+
+    var popupContent = '<div style="max-width: 500px;"><img src="images/acrossfukuoka.jpg" alt="Image" style="width: 200px; height: auto;"></div>';
+    L.marker([33.59197591938904, 130.4032882343487],{title:"アクロス福岡"}).addTo(map)
+    .bindPopup('<p><a href="https://adamay-design.github.io/mutedscapes/acrossfukuoka.html">アクロス福岡</a><br>' + popupContent + '</p>')
+    .openPopup();
+
+    var popupContent = '<div style="max-width: 500px;"><img src="images/aquahakata.jpg" alt="Image" style="width: 200px; height: auto;"></div>';
+    L.marker([33.59254288492705, 130.40356137517006],{title:"AQUA HAKATA"}).addTo(map)
+    .bindPopup('<p><a href="https://adamay-design.github.io/mutedscapes/aquahakata.html">AQUA HAKATA</a><br>' + popupContent + '</p>')
+    .openPopup();
+
+    var popupContent = '<div style="max-width: 500px;"><img src="images/solaria-tb.jpg" alt="Image" style="width: 200px; height: auto;"></div>';
+    L.marker([33.5880221289339, 130.39915365055128],{title:"ソラリアターミナルビル"}).addTo(map)
+    .bindPopup('<p><a href="https://adamay-design.github.io/mutedscapes/solariatb.html">ソラリアターミナルビル</a><br>' + popupContent + '</p>')
+    .openPopup();
+
+    var popupContent = '<div style="max-width: 500px;"><img src="images/fukuoka-db.jpg" alt="Image" style="width: 200px; height: auto;"></div>';
+    L.marker([33.591575065574865, 130.3986365156948],{title:"福岡ダイヤモンドビル"}).addTo(map)
+    .bindPopup('<p><a href="https://adamay-design.github.io/mutedscapes/fukuokadb.html">福岡ダイヤモンドビル</a><br>' + popupContent + '</p>')
+    .openPopup();
+
+    map.setView([33.591796023, 130.400536798], 16);
 
   }
 
 });
-
