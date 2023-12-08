@@ -626,7 +626,7 @@ timelapseのためのcss
 ===================================*/
 
 .gallery-container{
-    margin-top: 100px;
+    margin: 100px 0 100px;
 }
 .gallery-btn-container{
     display: flex;
