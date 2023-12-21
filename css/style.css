@@ -139,7 +139,7 @@ Index HTMLのためのcss
 
 .scroll-indicator {
     position: fixed;
-    bottom: 2%;
+    bottom: 1px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
