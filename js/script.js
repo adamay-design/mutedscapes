@@ -10,6 +10,26 @@ $(function () {
 });
 
 
+$(document).ready(function() {
+  var scrollIndicator = $('.scroll-indicator');
+  var overviewIntro = $('#overview-intro');
+  var windowHeight = $(window).height();
+
+  $(window).on('scroll', function() {
+    var scrollPos = $(this).scrollTop();
+    var overviewIntroOffset = overviewIntro.offset().top;
+
+    if (scrollPos > overviewIntroOffset - windowHeight) {
+      scrollIndicator.hide();
+    } else {
+      scrollIndicator.show();
+    }
+  });
+});
+
+
+
+
 // Slide //////////////////////////////////////////
 
 $(function () {

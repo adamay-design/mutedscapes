@@ -137,14 +137,34 @@ Index HTMLのためのcss
   transform: translateX(-50%) translateY(-50%);
 }
 
-.scroll-line{
-    bottom: 72px;
-    opacity: 1;
+.scroll-indicator {
+    position: fixed;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    z-index: 1000;
   }
+  
+  .scroll-indicator span {
+    font-size: 12px;
+    margin-bottom: 4px; /* マージンを調整 */
+  }
+  
+  .scroll-indicator i {
+    font-size: 12px;
+  }
+  
 
 @media screen and (max-width: 768px) {
     .video{
         min-width: 375px;
+    }
+    .scroll-indicator {
+        display: none;
     }
     }
 
@@ -784,7 +804,7 @@ mapのためのcss
     margin: 30px auto 500px;
     max-width: 900px;
     width: 90%;
-    height: 1000px;
+    height: 555px;
     z-index: 1;
 }
 
