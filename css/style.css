@@ -46,7 +46,7 @@ nav{
 
 .logo{
 	display: block;
-	width: 180px;
+	width: 140px;
 	position: fixed;
 	left: 40px;
 }
@@ -88,16 +88,12 @@ nav{
     background: #FFF;
 }
 */
-
-.fa-instagram{
-    font-size: 25px;
-    margin: 0 0 0 2px;
-}
-
 .fa-youtube{
     font-size: 25px;
-    margin: 0 0 0 2px;
+    margin-top: 2px;
 }
+
+
 
 @media (min-width: 960px){
     .hamburger-list ul{
@@ -169,36 +165,35 @@ Index HTMLのためのcss
 
 #overview-intro{
     width: 100%;
-    height: 100vh;
-    place-items: center;
+    height: 100dvh;
 }
 
 .inner-o{
     margin: 0 auto;
-    width: 1000px;
+    width: 900px;
 }
 
 .ov-text-container{
     height: 100vh;
-    padding: 0 20px 20px 0;
     display: table-cell;
     vertical-align: middle;
 }
 
 .ov-text1{
+    margin: 0 auto;
+    width: 900px;
     color: #000;
-    font-size: 2.1rem;
+    font-size: 1.5rem;
     line-height: 1.7;
     margin-bottom: 20px;
 }
 
 .ov-text2{
     color: #000;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.8;
     letter-spacing: 0.03em;
-    margin-bottom: 30px;
-    display: inline-block;
+    margin-bottom: 20px;
 }
 
 a.btn_01 {
@@ -227,30 +222,50 @@ a.btn_01:hover {
 
 .photo-intro{
     width: 100%;
-    height: 60vh;
-    display: grid;
-    place-items: center;
+    height: auto;
+    margin-bottom: 200px;
 }
-
+.intro-text1{
+    margin: 0 auto;
+    width: 900px;
+    color: #000;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
 .inner-s {
     margin: 0 auto;
-    width: 1000px;
+    width: 900px;
     display: flex;
+    justify-content: space-between;
+}
+.text-container-s{
+    width: 100%;
+    margin-right: 2rem;
+    display: table-cell;
+}
+
+.intro-text2{
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+    margin-bottom: 20px;
 }
 
 
 /****** Slide Container **********/
 .slide-container {
   position:relative;
-  width: 50%;
+  width: 100%;
   height: auto;
-  margin: -70px auto; /* 中央揃え */
+  margin: -100px auto; /* 中央揃え */
   display: grid;
   place-items: center; /* コンテンツを中央揃え */
 }
 .slide-image {
   display: none;
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   width: 100%;
@@ -261,41 +276,35 @@ a.btn_01:hover {
 }
 /***********************************/
 
-.text-container-s{
-    width: 47%;
-    margin-right: 2rem;
-    display: table-cell;
-}
+
 .timelapse-intro{
     width: 100%;
-    height: 60vh;
-    display: grid;
-    place-items: center;
-    margin-bottom: 150px;
+    height: auto;
+    margin-bottom: 100px;
 }
 .inner-t {
     margin: 0 auto;
-    width: 1000px;
+    width: 900px;
     display: flex;
+    justify-content: space-between;
 }
 .text-container-t{
-    width: 47%;
+    width: 100%;
     margin-right: 2rem;
     display: table-cell;
 }
 .timelapse-container {
-    width: 50%;
+    width: 100%;
     height: auto;
     margin: -25px auto; /* 中央揃え */
     display: grid;
-    place-items: center; /* コンテンツを中央揃え */
+    place-items: center; /*コンテンツを中央揃え*/
 }
 .timelapse-container video{
-    max-width: 500px;
+    max-width: 100%;
     height: auto;
     object-fit:cover;
 }
-
 .sp_br{
     display: none;
 }
@@ -308,38 +317,39 @@ a.btn_01:hover {
 
 @media (max-width: 428px) {
 
-.overview-intro{
+#overview-intro{
     width: 100%;
-    height: 100vh;
-    margin: 0;
-    display: grid;
-    place-items: center;
+    height: auto;
+    margin-bottom: 50px;
 }
 .inner-o{
     max-width: 380px;
-    width: 80%;
+    width: 90%;
     display: block;
 }
 .ov-text-container{
     width: 100%;
-    padding: 0;
+    height: auto;
+    padding-top: 50px;
     display: table-cell;
     vertical-align: middle;
 }
 .ov-text1{
+    max-width: 380px;
+    width: 100%;
     color: #000;
-    font-size: 2rem;
+    font-size: 1.4rem;
     line-height: 1.7;
     text-align: justify;
-    margin-bottom: 20px;
 }
 
 .ov-text2{
     color: #000;
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.7;
-    margin-bottom: 30px;
-    word-wrap: break-word;
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 20px;
 }
 .ov-text2 span{
     display: inline-block;
@@ -351,44 +361,78 @@ a.btn_01:hover {
 
 .photo-intro{
     width: 100%;
-    height: 100vh;
-    margin: 0;
-    display: grid;
-    place-items: center;
+    height: auto;
+    margin-bottom: 50px;
+}
+.intro-text1{
+    max-width: 380px;
+    width: 90%;
+    color: #000;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    text-align: justify;
 }
 .inner-s {
     max-width: 380px;
-    width: 80%;
-    display: block;
+    width: 90%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.intro-text2{
+    color: #000;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 20px;
 }
 .text-container-s{
+    width: 100%;
     display: table-cell;
+    vertical-align: middle;
 }
 .slide-container {
     width: 100%;
-    margin: 30px 20px auto 0
+    margin: 0 auto 10px;
 }
 .slide{
-    max-width: 380px;
-    height: auto;
+    width: 100%;
     object-fit:cover;
 }
 .inner-t {
     max-width: 380px;
-    width: 80%;
-    display: block;
+    width: 90%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.timelapse-intro{
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
 }
 .text-container-t{
+    width: 100%;
     display: table-cell;
+    vertical-align: middle;
 }
 .timelapse-container {
     width: 100%;
-    margin: 30px 20px auto 0
+    margin: 0 auto 10px;
 }
 .timelapse-container video{
     width:100%;
     object-fit:cover;
 }
+/* 
+.photo-intro{
+    margin: 60px 0 0;
+    height: 80dvh;
+}
+
+.timelapse-intro{
+    margin: 100px 0 60px;
+    height: 80dvh;
+} */
 
 }
 
@@ -408,11 +452,15 @@ aboutのためのcss
 .about-card{
     width: 100%;
     height: auto;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 .about-text1{
     margin: 0 auto;
     width: 900px;
+    color: #000;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
 }
 .inner-a {
     margin: 0 auto;
@@ -426,6 +474,12 @@ aboutのためのcss
     margin-right: 2rem;
     display: table-cell;
 }
+.about-text2{
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+}
 .img-container {
     width: 100%;
     height: auto;
@@ -436,25 +490,7 @@ aboutのためのcss
     object-fit:cover;
 }
 
-.ov-text-container{
-    height: 100vh;
-    display: table-cell;
-    vertical-align: middle;
-}
 
-.about-text1{
-    color: #000;
-    font-size: 1.5rem;
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-
-.about-text2{
-    color: #000;
-    font-size: 1rem;
-    line-height: 1.8;
-    letter-spacing: 0.03em;
-}
 
 @media (max-width: 428px){
     .about {
@@ -777,20 +813,7 @@ body{
     background:#FFF;
 }
 
-.overview-intro{
-    margin: 0;
-    height: 82dvh;
-}
 
-.photo-intro{
-    margin: 60px 0 0;
-    height: 80dvh;
-}
-
-.timelapse-intro{
-    margin: 100px 0 60px;
-    height: 80dvh;
-}
 
 .main-menu {
     display: none;
@@ -813,7 +836,7 @@ header {
 
 .logo {
     display: block;
-    width: 150px;
+    width: 120px;
 }
 
 .logo img{
@@ -828,8 +851,8 @@ header {
     cursor: pointer;                /*リンクを示すカーソルを表示（指差しマーク）*/
 	top: 4px;
 	right: 15px;
-    height: 44px;
-	width: 44px;                    /*高さと同じ幅*/
+    height: 39px;
+	width: 39px;                    /*高さと同じ幅*/
     z-index: 20;
 }
 
@@ -837,8 +860,8 @@ header {
     position: absolute;       /*親要素である#hamburgerを基準に位置を指定*/
 	top: 21px;
 	right: 10px;               /*#hamburger内の左がら15pxに横線を配置（幅が60pxなので右からも15px）*/
-    width: 25px;              /*横線の幅*/
-    height: 2px;              /*横線の高さ*/
+    width: 20px;              /*横線の幅*/
+    height: 1.5px;              /*横線の高さ*/
     background-color: #000;  /*横線を白色*/
     transition: ease 0.5s;   /*変化の時間（easeは初期値）*/
 }
@@ -847,10 +870,10 @@ header {
     top: 13px;
 }
 .icon span:nth-of-type(2) {
-    top: 23px;
+    top: 21px;
 }
 .icon span:nth-of-type(3) {
-    top: 33px;
+    top: 29px;
 }
 
 .close span:nth-of-type(1) {
