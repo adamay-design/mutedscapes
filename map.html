@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-  <head>
-    <meta charset="UTF-8">
-    <script src="./js/jquery-3.7.0.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-    <link href="./css/all.min.css" rel="stylesheet" >
-    <link href="./css/style.css" rel="stylesheet" >
+<head>
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src ="./js/script.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Map - Mutedscapes</title>
-  </head>
+  <!-- jQuery -->
+  <script src="./js/jquery-3.7.0.min.js"></script>
+  
+  <!-- Lightbox -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
+
+  <!-- leaflet -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+  <!-- Fonts -->
+  <link href="./css/all.min.css" rel="stylesheet" >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
+
+  <!-- Mutedscapes Original -->
+  <script src="./js/script.js" defer></script>
+  <link href="./css/style.css" rel="stylesheet" >
+  
+  <title>Map - Mutedscapes</title>
+</head>
 
   <body>
     <header>
 
       <nav>
         <a href="index.html" class="logo">
-          <img src="images/mutedscapes-logo-b.png">
+          <img src="images/logo.png">
         </a>
       </nav>
 
@@ -36,12 +47,6 @@
               <span></span>
           </div>
         </div>
-        <script>
-          $('#hamburger').on('click', function(){
-          $('.icon').toggleClass('close');
-          $('.hamburger-list').slideToggle();
-          });
-        </script>
 <!--△△ハンバーガーメニュー△△-->
 
 <!--▽▽ハンバーガーメニューのリスト▽▽-->
