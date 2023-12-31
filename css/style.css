@@ -19,7 +19,18 @@ body{
     min-width:960px;
 	background:#FFF;
 	font-size:15px;
-    font-family: 'Noto Sans JP', sans-serif;
+    /* font-family: 'Noto Sans JP', sans-serif; */
+    /* font-family: 'Abel', sans-serif; */
+
+    /* font-family: 'Dosis', sans-serif; */
+
+    font-family: 'Montserrat', sans-serif;
+
+    /* font-family: 'Noto Sans JP', sans-serif; */
+
+    /* font-family: 'Raleway', sans-serif; */
+
+
 }
 
 header {
@@ -67,7 +78,8 @@ nav{
 
 .main-menu ul{
     text-align: center;
-    height: 30px; /*メニューの高さ*/
+    display: flex;
+    align-items: center;
 }
 
 .main-menu ul li {
@@ -76,6 +88,7 @@ nav{
 
 .main-menu ul li a {
 	height: 70px;
+    position: relative;
     vertical-align:middle;
     color:rgba(0, 0, 0, 0.8);
     text-decoration:none;
@@ -83,11 +96,27 @@ nav{
 	padding: 10px 10px;
     font-size: 14px;
 }
-/*
-.main-menu ul li a:hover {
-    background: #FFF;
+
+.main-menu ul li a::after {
+  /*アンダーラインのスタイル*/
+  position: absolute;
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #000;
+  bottom: 0;
+  left: 0;
+  /*幅を0に設定*/
+  width: 0;
+  /*アニメーションの速度設定*/
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
-*/
+
+.main-menu ul li a:hover::after {
+    width: 100%; /* 変更 */
+}
+
 .fa-youtube{
     font-size: 25px;
     margin-top: 2px;
@@ -114,7 +143,6 @@ Index HTMLのためのcss
     transform: translateX(-50%); /* 中央寄せ */
     overflow: hidden;
     z-index: -1;
-
 }
 
 .main-visual::after{
@@ -203,17 +231,19 @@ Index HTMLのためのcss
     margin: 0 auto;
     width: 900px;
     color: #000;
+    font-weight: bold;
     font-size: 1.5rem;
-    line-height: 1.7;
     margin-bottom: 20px;
 }
 
 .ov-text2{
     color: #000;
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: 1.08rem;
+    line-height: 1.8rem;
     letter-spacing: 0.03em;
     margin-bottom: 20px;
+    text-align: justify;
+    word-break: break-all;
 }
 
 a.btn_01 {
@@ -249,6 +279,7 @@ a.btn_01:hover {
     margin: 0 auto;
     width: 900px;
     color: #000;
+    font-weight: bold;
     font-size: 1.5rem;
     line-height: 1.7;
     margin-bottom: 20px;
@@ -267,10 +298,13 @@ a.btn_01:hover {
 
 .intro-text2{
     color: #000;
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: 1.08rem;
+    line-height: 1.8rem;
     letter-spacing: 0.03em;
     margin-bottom: 20px;
+    text-align: justify;
+    word-break: break-all;
+  
 }
 
 
@@ -369,6 +403,7 @@ a.btn_01:hover {
     line-height: 1.7;
     width: 100%;
     text-align: justify;
+    word-break: break-all; 
     margin-bottom: 20px;
 }
 .ov-text2 span{
@@ -404,6 +439,7 @@ a.btn_01:hover {
     line-height: 1.7;
     width: 100%;
     text-align: justify;
+    word-break: break-all;
     margin-bottom: 20px;
 }
 .text-container-s{
@@ -478,8 +514,8 @@ aboutのためのcss
     margin: 0 auto;
     width: 900px;
     color: #000;
+    font-weight: bold;
     font-size: 1.5rem;
-    line-height: 1.7;
     margin-bottom: 20px;
 }
 .inner-a {
@@ -497,8 +533,10 @@ aboutのためのcss
 .about-text2{
     color: #000;
     font-size: 1rem;
-    line-height: 1.8;
-    letter-spacing: 0.03em;
+    line-height: 1.6rem;
+    letter-spacing: 0.03rem;
+    text-align: justify;
+    word-break: break-all;  
 }
 .img-container {
     width: 100%;
@@ -510,8 +548,6 @@ aboutのためのcss
     object-fit:cover;
 }
 
-
-
 @media (max-width: 428px){
     .about {
         margin-top: 80px;
@@ -522,9 +558,9 @@ aboutのためのcss
     }
     .about-text1{
         max-width: 380px;
-        width: 85%;
+        width: 90%;
         color: #000;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         line-height: 1.7;
         text-align: justify;
     }
@@ -540,6 +576,7 @@ aboutのためのcss
         line-height: 1.7;
         width: 100%;
         text-align: justify;
+        word-break: break-all;      
         margin-bottom: 20px;
     }
     .text-container-a{
@@ -576,56 +613,75 @@ timelapseのためのcss
     flex-wrap: wrap;
     gap: 20px;
   }
-  
+.tl-container {
+    display: flex;
+    justify-content: center; /* 左右中央揃え */
+    align-items: center;
+    margin: 0 100px 600px; /* 左右の余白 */
+  }
 .tl-card {
+    position: relative;
+    cursor: pointer;
     width: 37.5%;
-    padding: 12px;
     background-color: rgba(255, 255, 255, 0.7); /* 色と透明度 */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* 影 */
-    border: 1 solid rgba(255, 255, 255, 0.8); /* 境界線 */
     backdrop-filter: blur(5px); /* ぼかし */
-    /* border-radius: 5px; */
-  }  
-
+  }
+.tl-card li a{
+    display: block;
+}
 .tl-card img{
     width: 100%;
-}
-
-.tl-card p {
+    display: block;
+  }
+.tl-card-text{
+    width: calc(100% - 30px); /* 変更：tl-cardのpadding分を引く */
+    padding: 15px;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    color: #FFF;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    left: calc(50% - 50%); /* 中央揃え */
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity 0.6s ease;
+  }
+  .tl-card:hover .tl-card-text {
+    opacity: 1; /* ホバー時に表示 */
+    pointer-events: none; /* ホバー時にクリック可能にする */
+  }  
+.tl-card-text p {
     line-height: 1.7;
     text-align: justify;
     margin-bottom: 0;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 15px;
-    color: #000;
-
+    font-size: 20px;
+    color: #fff;
   }
-
 .contents{
     padding: 0 210px 60px;
     background-color: #FFF;
-}
-
+  }
 .title-container{
     margin-bottom: 20px;
-}
-
+  }
 .title-container h1{
     margin-top: 90px;
     text-align: left;
     font-size: 15px;
     color: #000;
-    font-family: 'Noto Sans JP', sans-serif;
-}
-
+  }
 .youtube-container video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-}
-
+  }
 .youtube-container{
    position: relative;
    padding-bottom: 56.25%; /*アスペクト比 16:9の場合の縦幅*/
@@ -633,29 +689,25 @@ timelapseのためのcss
    overflow: hidden;
    text-align: center;
    margin-bottom: 30px;
-}
-
+  }
 .work-text-container {
    margin-bottom: 150px;
    text-align: left;
    color: #FFF;
-}
-
+  }
 .details {
     margin-bottom: 30px;
-}
-
+  }
 .details p {
    line-height: 1.7;
    text-align: justify;
    margin-bottom: 18px;
-   font-family: 'Noto Sans JP', sans-serif;
    font-size: 13px;
    color: #909090;
-}
+  }
 .details p b{
     font-size: 15px;
-}
+  }
 
 @media (max-width: 1200px){
     .tl-container{
@@ -681,10 +733,11 @@ timelapseのためのcss
         margin: 0;
     }
     .tl-card-container {
-        margin: 100px 0 60px ;
+        margin: 100px 20px 60px ;
       }
     .tl-card {
-        width: 80%;
+        width: 100%;
+        margin-bottom: 15px;
     }
     .contents{
         padding: 0 20px 210px;
@@ -701,12 +754,12 @@ timelapseのためのcss
 
 .gallery-container{
     margin: 100px 0 100px;
-}
+  }
 .gallery-btn-container{
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
 a.gallery-btn {
     z-index: 0;
@@ -725,11 +778,11 @@ a.gallery-btn {
     text-decoration: none;
     position: relative;
     transition-duration: 0.2s;
-}
+  }
 a.gallery-btn:hover {
   background: #000;
   color: #FFF;
-}
+  }
 
 a.gallery-btn.active {
     background: #000;
@@ -740,15 +793,14 @@ a.gallery-btn.active {
     margin-top: 15px;
     columns: 4;/*段組みの数*/
     padding: 15px 100px 0;/*ギャラリー左右に余白をつける*/
-}
+  }
 
 .gallery li {
     margin-right: 0%;
     list-style:none;
-    animation: test .8s;
     margin-bottom:15px;
     list-style:none;
-}
+  }
 
 /*ギャラリー内のイメージは横幅100%にする*/
 .gallery img {
@@ -756,7 +808,7 @@ a.gallery-btn.active {
     height:auto;
     vertical-align: bottom;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-}
+  }
 
 /*　横幅900px以下の段組み設定　*/
 @media only screen and (max-width: 900px) {
@@ -770,7 +822,7 @@ a.gallery-btn.active {
     .gallery-btn-container{
         padding: 0 10px;
     }
-}
+  }
 
 @media only screen and (max-width: 428px) {
     .gallery-container{
@@ -787,7 +839,7 @@ a.gallery-btn.active {
     a.gallery-btn {
         margin: 0 10px;
     }
-}
+  }
 
 /*==================================================
 mapのためのcss
@@ -913,7 +965,7 @@ header {
 .hamburger-list {
     z-index: 19;
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
-    font-size:20px;
+    font-size: 1.1rem;
     top: 55px;  /*headerの余白分　ヘッダーには左右に15px余白があるので、headerの子要素となる.hamburger-listは15px分内側に設置されます。その余白を埋めるために左に寄せる。*/
     position: absolute; /*絶対配置　top　leftからの位置を絶対配置する*/
     height: 100dvh;
