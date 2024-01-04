@@ -19,23 +19,12 @@ body{
     min-width:960px;
 	background:#FFF;
 	font-size:15px;
-    /* font-family: 'Noto Sans JP', sans-serif; */
-    /* font-family: 'Abel', sans-serif; */
-
-    /* font-family: 'Dosis', sans-serif; */
-
     font-family: 'Montserrat', sans-serif;
-
-    /* font-family: 'Noto Sans JP', sans-serif; */
-
-    /* font-family: 'Raleway', sans-serif; */
-
-
 }
 
 header {
     z-index: 20;
-    height: 70px;
+    height: 55px;
     width: 100%;
     top: 0;
     padding: 0;
@@ -51,7 +40,7 @@ nav{
 	position:relative;
     display:flex;
 	align-items:center;
-    height:70px;
+    height:55px;
     width:100%;
 }
 
@@ -106,9 +95,8 @@ nav{
   background-color: #000;
   bottom: 0;
   left: 0;
-  /*幅を0に設定*/
   width: 0;
-  /*アニメーションの速度設定*/
+  /*アニメーションの速度*/
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -135,12 +123,12 @@ Index HTMLのためのcss
 ===================================*/
 
 .main-visual{
-    width: calc(90%);
+    width: calc(100%);
     height: 100dvh;
     position: fixed;
     top: 0;
     left: 50%;
-    transform: translateX(-50%); /* 中央寄せ */
+    transform: translateX(-50%);
     overflow: hidden;
     z-index: -1;
 }
@@ -171,20 +159,23 @@ Index HTMLのためのcss
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     color: #000;
     z-index: 1000;
-  }
-  
-  .scroll-indicator span {
-    font-size: 12px;
-    margin-bottom: 4px; /* マージンを調整 */
-  }
-  
-  .scroll-indicator i {
-    font-size: 12px;
-  }
+    width: 50px; /* 半円の幅を調整 */
+    height: 50px; /* 半円の高さを調整 */
+    background-color: #fff; /* 背景色を白に設定 */
+    border-radius: 50%; /* border-radiusを50%に設定して半円にする */
+    overflow: hidden; /* 不要な部分を隠すためにoverflowをhiddenに設定 */
+}
+
+.scroll-indicator i {
+    font-size: 15px;
+    display: block;
+    margin-top: 0px; /* 矢印を円の中央に移動 */
+    transform: translateX(0%)translateY(0%);
+}
   
 
 @media screen and (max-width: 768px) {
@@ -199,7 +190,7 @@ Index HTMLのためのcss
 #swiper-container{
     width: 100%;
     top: 100vh;
-    background-color: rgba(255,255,255,0.75);
+    background-color: rgba(255,255,255,0.85);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影の設定 */
     backdrop-filter: blur(6px);
     overflow: hidden; /* 横スクロールを防ぐ */
@@ -304,7 +295,6 @@ a.btn_01:hover {
     margin-bottom: 20px;
     text-align: justify;
     word-break: break-all;
-  
 }
 
 
@@ -546,7 +536,17 @@ aboutのためのcss
     max-width: 100%;
     height: auto;
     object-fit:cover;
-}
+    animation: fadeIn 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+    }
+       
+    @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    }
 
 @media (max-width: 428px){
     .about {
@@ -629,12 +629,22 @@ timelapseのためのcss
   }
 .tl-card li a{
     display: block;
-}
+  }
 .tl-card img{
     width: 100%;
     display: block;
+    animation: fadeIn 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
   }
-.tl-card-text{
+   
+    @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+.tl-card-mask{
     width: calc(100% - 30px); /* 変更：tl-cardのpadding分を引く */
     padding: 15px;
     align-items: center;
@@ -651,15 +661,16 @@ timelapseのためのcss
     top: 0;
     transition: opacity 0.6s ease;
   }
-  .tl-card:hover .tl-card-text {
+  .tl-card:hover .tl-card-mask {
     opacity: 1; /* ホバー時に表示 */
     pointer-events: none; /* ホバー時にクリック可能にする */
-  }  
-.tl-card-text p {
+  }
+.tl-card-caption p{
     line-height: 1.7;
     text-align: justify;
+    word-break: break-all;
     margin-bottom: 0;
-    font-size: 20px;
+    font-size: 1.5rem;
     color: #fff;
   }
 .contents{
@@ -739,6 +750,14 @@ timelapseのためのcss
         width: 100%;
         margin-bottom: 15px;
     }
+    .tl-card-caption p{
+        line-height: 1.7;
+        text-align: justify;
+        word-break: break-all;
+        margin-bottom: 0;
+        font-size: 20px;
+        color: #fff;
+      }
     .contents{
         padding: 0 20px 210px;
         min-width: 375px;
@@ -808,7 +827,18 @@ a.gallery-btn.active {
     height:auto;
     vertical-align: bottom;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  }
+    animation: fadeIn 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+   
+@keyframes fadeIn {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+
 
 /*　横幅900px以下の段組み設定　*/
 @media only screen and (max-width: 900px) {
@@ -860,6 +890,22 @@ mapのためのcss
     z-index: 1;
 }
 
+.leaflet-popup-content p{
+    margin: 17px 0;
+    margin: 0.7em 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.leaflet-popup-content {
+    margin: 10px 12px;
+    line-height: 1.3;
+    font-size: 1.2em;
+    min-height: 1px;
+  }
+
+  .leaflet-popup-content-wrapper {
+    border-radius: 0; /* 角丸を解除して直角にする */
+}
 @media (max-width: 768px) {
 #map {
     width: 90%;
@@ -1015,7 +1061,7 @@ ul {
     position: relative;/*←相対位置*/
     padding-bottom: 80px;/*←footerの高さ*/
     box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.7); /* ガラスの色と透明度を設定 */
+    background-color: rgba(255, 255, 255, 1); /* ガラスの色と透明度を設定 */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* ガラスの影の効果を追加 */
     backdrop-filter: blur(5px); /* フィルターを使って背後の要素をぼかす効果を追加 */
     border: 1 solid rgba(255, 255, 255, 0.8); /* ガラスの境界線を追加 */
@@ -1029,7 +1075,7 @@ ul {
   
   .wrapper p {
     color: #000;
-    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     margin: 0; /* デフォルトの余白を除去 */
   }

@@ -116,37 +116,37 @@ $(function(){
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
-    var popupContent = '<div style="max-width: 500px;"><img src="images/ksu-bldg2.jpg" alt="Image" style="width: 200px; height: auto;"></div>';
-    L.marker([33.670655, 130.444721],{title:"九州産業大学 2号館"}).addTo(map)
-    .bindPopup('<p><a href="https://adamay-design.github.io/mutedscapes/ksu-bldg2.html">九州産業大学 2号館</a><br>' + popupContent + '</p>')
+    var popupContent = '<div style="max-width: 500px;"><img src="images/ksubldg2.jpg" alt="Image" style="width: 225px; height: auto;"></div>';
+    L.marker([33.670655, 130.444721],{title:"Kyushu Sangyo University - Bldg.2"}).addTo(map)
+    .bindPopup('<p><a href="https://adamay-design.github.io/mutedscapes/ksu-bldg2.html">Kyushu Sangyo University - Bldg.2</a><br>' + popupContent + '</p>')
     .openPopup();
 
-    var popupContent = '<div style="max-width: 500px;"><img src="images/tenjin-bc.jpg" alt="Image" style="width: 200px; height: auto;"></div>';
-    L.marker([33.591796023990646, 130.40053679829194],{title:"天神ビジネスセンター"}).addTo(map)
-    .bindPopup('<p><a href="https://adamay-design.github.io/mutedscapes/tenjin-bc.html">天神ビジネスセンター</a><br>' + popupContent + '</p>')
+    var popupContent = '<div style="max-width: 500px;"><img src="images/tenjinbc.jpg" alt="Image" style="width: 225px; height: auto;"></div>';
+    L.marker([33.591796023990646, 130.40053679829194],{title:"Tenjin Business Center"}).addTo(map)
+    .bindPopup('<p><a href="https://adamay-design.github.io/mutedscapes/tenjin-bc.html">Tenjin Business Center</a><br>' + popupContent + '</p>')
     .openPopup();
 
-    var popupContent = '<div style="max-width: 500px;"><img src="images/acrossfukuoka.jpg" alt="Image" style="width: 200px; height: auto;"></div>';
-    L.marker([33.59197591938904, 130.4032882343487],{title:"アクロス福岡"}).addTo(map)
-    .bindPopup('<p><a href="https://adamay-design.github.io/mutedscapes/acrossfukuoka.html">アクロス福岡</a><br>' + popupContent + '</p>')
+    var popupContent = '<div style="max-width: 500px;"><img src="images/acrosfukuoka.jpg" alt="Image" style="width: 225px; height: auto;"></div>';
+    L.marker([33.59197591938904, 130.4032882343487],{title:"Acros Fukuoka"}).addTo(map)
+    .bindPopup('<p><a href="https://adamay-design.github.io/mutedscapes/acrosfukuoka.html">Acros Fukuoka</a><br>' + popupContent + '</p>')
     .openPopup();
 
-    var popupContent = '<div style="max-width: 500px;"><img src="images/aquahakata.jpg" alt="Image" style="width: 200px; height: auto;"></div>';
+    var popupContent = '<div style="max-width: 500px;"><img src="images/aquahakata.jpg" alt="Image" style="width: 225px; height: auto;"></div>';
     L.marker([33.59254288492705, 130.40356137517006],{title:"AQUA HAKATA"}).addTo(map)
     .bindPopup('<p><a href="https://adamay-design.github.io/mutedscapes/aquahakata.html">AQUA HAKATA</a><br>' + popupContent + '</p>')
     .openPopup();
 
-    var popupContent = '<div style="max-width: 500px;"><img src="images/solaria-tb.jpg" alt="Image" style="width: 200px; height: auto;"></div>';
-    L.marker([33.5880221289339, 130.39915365055128],{title:"ソラリアターミナルビル"}).addTo(map)
-    .bindPopup('<p><a href="https://adamay-design.github.io/mutedscapes/solariatb.html">ソラリアターミナルビル</a><br>' + popupContent + '</p>')
+    var popupContent = '<div style="max-width: 500px;"><img src="images/solariatb.jpg" alt="Image" style="width: 225px; height: auto;"></div>';
+    L.marker([33.5880221289339, 130.39915365055128],{title:"Solaria Terminal Building"}).addTo(map)
+    .bindPopup('<p><a href="https://adamay-design.github.io/mutedscapes/solariatb.html">Solaria Terminal Building</a><br>' + popupContent + '</p>')
     .openPopup();
 
-    var popupContent = '<div style="max-width: 500px;"><img src="images/fukuoka-db.jpg" alt="Image" style="width: 200px; height: auto;"></div>';
-    L.marker([33.591575065574865, 130.3986365156948],{title:"福岡ダイヤモンドビル"}).addTo(map)
-    .bindPopup('<p><a href="https://adamay-design.github.io/mutedscapes/fukuokadb.html">福岡ダイヤモンドビル</a><br>' + popupContent + '</p>')
+    var popupContent = '<div style="max-width: 500px;"><img src="images/fukuoka-db.jpg" alt="Image" style="width: 225px; height: auto;"></div>';
+    L.marker([33.591575065574865, 130.3986365156948],{title:"Fukuoka Diamond Building"}).addTo(map)
+    .bindPopup('<p><a href="https://adamay-design.github.io/mutedscapes/fukuokadb.html">Fukuoka Diamond Building</a><br>' + popupContent + '</p>')
     .openPopup();
 
-    map.setView([33.591796023, 130.400536798], 16);
+    map.setView([33.591796023, 130.400936798], 15.5);
 
   }
 
