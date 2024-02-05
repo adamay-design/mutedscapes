@@ -719,8 +719,8 @@ timelapseのためのcss
    margin-bottom: 18px;
    font-size: 14px;
    color: #909090;
+   pointer-events: none;
   }
-
 @media (max-width: 1200px){
     .tl-container{
         min-width: 429px;
