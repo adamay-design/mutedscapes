@@ -174,7 +174,7 @@ Index HTMLのためのcss
 .scroll-indicator i {
     font-size: 14px;
     display: block;
-    margin-top: 0px; /* 矢印を円の中央に移動 */
+    margin-top: 0px;
     transform: translateX(0%)translateY(0%);
 }
   
@@ -195,9 +195,9 @@ Index HTMLのためのcss
     width: 100%;
     top: 100vh;
     background-color: rgba(255,255,255,0.85);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 影の設定 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6px);
-    overflow: hidden; /* 横スクロールを防ぐ */
+    overflow: hidden;
 }
 
 .transparent{
@@ -307,9 +307,9 @@ a.btn_01:hover {
   position:relative;
   width: 100%;
   height: auto;
-  margin: -100px auto; /* 中央揃え */
+  margin: -100px auto;
   display: grid;
-  place-items: center; /* コンテンツを中央揃え */
+  place-items: center;
 }
 .slide-image {
   display: none;
@@ -344,9 +344,9 @@ a.btn_01:hover {
 .timelapse-container {
     width: 100%;
     height: auto;
-    margin: -25px auto; /* 中央揃え */
+    margin: -25px auto;
     display: grid;
-    place-items: center; /*コンテンツを中央揃え*/
+    place-items: center;
 }
 .timelapse-container video{
     max-width: 100%;
@@ -605,9 +605,9 @@ timelapseのためのcss
 
 .tl-container {
     display: flex;
-    justify-content: center; /* 左右中央揃え */
+    justify-content: center;
     align-items: center;
-    margin: 0 100px; /* 左右の余白 */
+    margin: 0 100px;
   }
 
 .tl-card-container {
@@ -619,17 +619,17 @@ timelapseのためのcss
   }
 .tl-container {
     display: flex;
-    justify-content: center; /* 左右中央揃え */
+    justify-content: center;
     align-items: center;
-    margin: 0 100px 600px; /* 左右の余白 */
+    margin: 0 100px 600px;
   }
 .tl-card {
     position: relative;
     cursor: pointer;
     width: 37.5%;
-    background-color: rgba(255, 255, 255, 0.7); /* 色と透明度 */
-    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3); /* 影 */
-    backdrop-filter: blur(5px); /* ぼかし */
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
   }
 .tl-card li a{
     display: block;
@@ -649,7 +649,7 @@ timelapseのためのcss
     }
   }
 .tl-card-mask{
-    width: calc(100% - 30px); /* 変更：tl-cardのpadding分を引く */
+    width: calc(100% - 30px);
     padding: 15px;
     align-items: center;
     background: rgba(0, 0, 0, 0.5);
@@ -658,7 +658,7 @@ timelapseのためのcss
     display: flex;
     height: auto;
     justify-content: center;
-    left: calc(50% - 50%); /* 中央揃え */
+    left: calc(50% - 50%);
     opacity: 0;
     position: absolute;
     right: 0;
@@ -666,8 +666,8 @@ timelapseのためのcss
     transition: opacity 0.6s ease;
   }
   .tl-card:hover .tl-card-mask {
-    opacity: 1; /* ホバー時に表示 */
-    pointer-events: none; /* ホバー時にクリック可能にする */
+    opacity: 1;
+    pointer-events: none;
   }
 .tl-card-caption p{
     line-height: 1.7;
@@ -699,7 +699,7 @@ timelapseのためのcss
   }
 .youtube-container{
    position: relative;
-   padding-bottom: 56.25%; /*アスペクト比 16:9の場合の縦幅*/
+   padding-bottom: 56.25%;
    height: 0;
    overflow: hidden;
    text-align: center;
@@ -811,8 +811,8 @@ a.gallery-btn.active {
 
 .gallery{
     margin-top: 15px;
-    columns: 4;/*段組みの数*/
-    padding: 15px 100px 0;/*ギャラリー左右に余白をつける*/
+    columns: 4;
+    padding: 15px 100px 0;
   }
 
 .gallery li {
@@ -883,7 +883,15 @@ mapのためのcss
     align-items: center;
 }
 
-#map {
+#TenjinHakata-map {
+    margin: 30px auto 500px;
+    max-width: 900px;
+    width: 90%;
+    height: 555px;
+    z-index: 1;
+}
+
+#etc-map {
     margin: 30px auto 500px;
     max-width: 900px;
     width: 90%;
@@ -905,18 +913,26 @@ mapのためのcss
   }
 
   .leaflet-popup-content-wrapper {
-    border-radius: 0; /* 角丸を解除して直角にする */
+    border-radius: 0;
 }
 
 @media (max-width: 768px) {
-#map {
+#TenjinHakata-map {
+    width: 90%;
+    height: 400px;
+    }
+#etc-map {
     width: 90%;
     height: 400px;
     }
 }
 
 @media (max-width: 428px) {
-#map {
+#TenjinHakata-map {
+    width: 90%;
+    height: 400px;
+    }
+#etc-map {
     width: 90%;
     height: 400px;
     }
@@ -946,8 +962,8 @@ body{
 header {
     height: 55px;
     display: flex;
-    justify-content: center; /* 横方向中央揃え */
-    align-items: center; /* 縦方向中央揃え */
+    justify-content: center;
+    align-items: center;
 }
 
 .nav{
@@ -997,7 +1013,7 @@ header {
 }
 
 .close span:nth-of-type(1) {
-    transform: rotate(45deg); /*反時計回りに45度回転*/
+    transform: rotate(45deg);
     top: 23px;
 }
 
@@ -1014,18 +1030,18 @@ header {
     z-index: 19;
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
     font-size: 1.1rem;
-    top: 55px;  /*headerの余白分　ヘッダーには左右に15px余白があるので、headerの子要素となる.hamburger-listは15px分内側に設置されます。その余白を埋めるために左に寄せる。*/
-    position: absolute; /*絶対配置　top　leftからの位置を絶対配置する*/
+    top: 55px;
+    position: absolute;
     height: 100dvh;
     background: #000;
-    background-color: rgba(42, 86, 120, 0.7); /* ガラスの色と透明度を設定 */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* ガラスの影の効果*/
-    backdrop-filter: blur(10px); /* フィルターを使って背後の要素をぼかす効果 */
+    background-color: rgba(42, 86, 120, 0.7);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
 }
 
 .hamburger-list ul li {
 	text-align: center;
-	height: 50px; /*メニューの高さ*/
+	height: 50px;
 }
 
 nav.hamburger-list{
@@ -1068,26 +1084,26 @@ ul {
 }
 
 .wrapper{
-    position: relative;/*←相対位置*/
-    padding-bottom: 80px;/*←footerの高さ*/
+    position: relative;
+    padding-bottom: 80px;
     box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 1); /* ガラスの色と透明度を設定 */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* ガラスの影の効果を追加 */
-    backdrop-filter: blur(5px); /* フィルターを使って背後の要素をぼかす効果を追加 */
-    border: 1 solid rgba(255, 255, 255, 0.8); /* ガラスの境界線を追加 */
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    border: 1 solid rgba(255, 255, 255, 0.8);
 }
 
 .wrapper footer {
     display: flex;
-    justify-content: center; /* 横方向中央揃え */
-    align-items: center; /* 縦方向中央揃え */
+    justify-content: center;
+    align-items: center;
   }
   
   .wrapper p {
     color: #000;
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
-    margin: 0; /* デフォルトの余白を除去 */
+    margin: 0;
   }
 
 
@@ -1095,5 +1111,5 @@ footer{
     width: 100%;
     padding: 32px 0;
     position: absolute;
-    bottom: 0; /*下に固定*/
+    bottom: 0;
 }
