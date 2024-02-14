@@ -899,6 +899,34 @@ mapのためのcss
     z-index: 1;
 }
 
+a.map-btn {
+    z-index: 0;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 1.5px solid #000;
+    box-sizing: border-box;
+    width: 140px;
+    height: 40px;
+    padding: 0;
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+    position: relative;
+    transition-duration: 0.2s;
+  }
+a.map-btn:hover {
+  background: #000;
+  color: #FFF;
+  }
+
+a.map-btn.active {
+    background: #000;
+    color: #FFF;
+  }
+
 .leaflet-popup-content p{
     margin: 17px 0;
     margin: 0.7em 0;
