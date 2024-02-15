@@ -554,17 +554,19 @@ aboutのためのcss
 
 @media (max-width: 428px){
     .about {
-        margin-top: 80px;
+        margin: 80px 0;
     }
     .about-card{
         width: 100%;
         height: auto;
+        margin-bottom: 15px;
     }
     .about-text1{
         max-width: 380px;
+        margin-bottom: 10px;
         width: 90%;
         color: #000;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         line-height: 1.7;
         text-align: justify;
     }
