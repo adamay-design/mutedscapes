@@ -427,6 +427,7 @@ a.btn_01:hover {
     width: 90%;
     display: flex;
     flex-direction: column-reverse;
+    margin-bottom: 100px;
 }
 .intro-text2{
     color: #000;
@@ -1059,7 +1060,7 @@ header {
     position: absolute;
     height: 100dvh;
     background: #000;
-    background-color: rgba(42, 86, 120, 0.7);
+    background-color: rgba(42, 86, 120, 0.8);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(10px);
 }

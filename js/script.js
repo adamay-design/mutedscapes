@@ -123,7 +123,7 @@ $(function () {
 
     var popupContent = '<div style="max-width: 500px;"><img src="images/tenjinbc.jpg" alt="Image" style="width: 200px; height: auto;"></div>';
     L.marker([33.591796023990646, 130.40053679829194],{title:"Tenjin Business Center"}).addTo(map)
-    .bindPopup('<p><a href="https://adamay-design.github.io/mutedscapes/tenjin-bc.html">Tenjin Business Center</a><br>' + popupContent + '</p>')
+    .bindPopup('<p><a href="https://adamay-design.github.io/mutedscapes/tenjinbc.html">Tenjin Business Center</a><br>' + popupContent + '</p>')
     .openPopup();
 
     var popupContent = '<div style="max-width: 500px;"><img src="images/acrosfukuoka.jpg" alt="Image" style="width: 200px; height: auto;"></div>';
