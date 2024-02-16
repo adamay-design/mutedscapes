@@ -1015,7 +1015,7 @@ header {
 	right: 15px;
     height: 39px;
 	width: 39px;                    /*高さと同じ幅*/
-    z-index: 20;
+    z-index: 1000;
 }
 
 .icon span {
