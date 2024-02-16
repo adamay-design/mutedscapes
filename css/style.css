@@ -30,7 +30,7 @@ header {
     padding: 0;
     position: fixed;
     display: flex;
-    background-color: rgba(255,255,255, 0.7);
+    background-color: rgba(255,255,255, 0.8);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); 
     backdrop-filter: blur(5px);
     border: 1 solid rgba(255, 255, 255, 0.98);
@@ -163,7 +163,7 @@ Index HTMLのためのcss
     z-index: 1000;
     width: 40px; 
     height: 40px;
-    background-color: rgba(255,255,255, 0.7);
+    background-color: rgba(255,255,255, 0.9);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); 
     backdrop-filter: blur(5px);
     border: 1 solid rgba(255, 255, 255, 0.98);
@@ -184,6 +184,7 @@ Index HTMLのためのcss
         min-width: 375px;
     }
     .scroll-indicator {
+        box-shadow: 0 0 0 rgba(255, 255, 255, 0); 
         display: none;
     }
     .scroll-indicator i {
