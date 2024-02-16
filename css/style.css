@@ -560,22 +560,29 @@ aboutのためのcss
         margin: 80px 0;
     }
     .about-card{
-        width: 100%;
+        margin: 0 auto;
+        width: 90%;
         height: auto;
         margin-bottom: 30px;
     }
+    /* .about-card{
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+    } */
     .about-text1{
         max-width: 380px;
         margin-bottom: 10px;
-        width: 90%;
+        width: 100%;
         color: #000;
         font-size: 1.2rem;
         line-height: 1.7;
         text-align: justify;
+        word-break: break-all;     
     }
     .inner-a {
         max-width: 380px;
-        width: 90%;
+        width: 100%;
         display: flex;
         flex-direction: column-reverse;
     }
