@@ -728,13 +728,13 @@ timelapseのためのcss
    pointer-events: none;
   }
 
-@media (min-width: 2000px){
+@media (min-width: 2500px){
     .tl-card-container {
         gap: 30px;
   }
-  br.disable-on-wide-screen {
+  /* br.disable-on-wide-screen {
     display: none;
-  }
+  } */
   .tl-card-caption p{
     font-size: 3rem;
   }
