@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja">
-
   <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- jQuery -->
+    <!-- jQuery (Lightboxなど一部ライブラリ用) -->
     <script src="./js/jquery-3.7.0.min.js"></script>
 
     <!-- Lightbox -->
@@ -17,81 +15,76 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 
-    <!-- Fonts -->
+    <!-- Fonts (事前接続と読み込みの最適化) -->
     <link href="./css/all.min.css" rel="stylesheet" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Mutedscapes Original -->
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" defer></script>
     <link href="./css/style.css" rel="stylesheet" >
 
     <title>Mutedscapes</title>
   </head>
 
   <body>
-    <header>
-
-      <nav>
-        <a href="index.html" class="logo">
-          <img src="images/logo.png">
+    <header class="header">
+      <nav class="nav-container">
+        <a href="index.html" class="logo" aria-label="Mutedscapes ホーム">
+          <!-- CLS防止のためwidth/heightを指定 -->
+          <img src="images/logo.png" alt="Mutedscapes" width="140" height="auto">
         </a>
+
+        <!--▽▽ハンバーガーメニュー (アクセシビリティ対応) ▽▽-->
+        <button id="hamburger" class="hamburger-btn" aria-controls="mobile-menu" aria-expanded="false" aria-label="メニューを開く">
+          <span class="icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+        <!--△△ハンバーガーメニュー△△-->
+
+        <!--▽▽ハンバーガーメニューのリスト▽▽-->
+        <nav id="mobile-menu" class="hamburger-list" aria-hidden="true">
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="timelapse.html">TimeLapse</a></li>
+            <li><a href="photo.html">Photo</a></li>
+            <li><a href="map.html">Map</a></li>
+            <li><a href="https://www.youtube.com/@mutedscapes/videos" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+        </nav>
+        <!--△△ハンバーガーメニューのリスト△△-->
+
+        <!--▽▽ヘッダーリスト▽▽-->
+        <nav class="main-menu">
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="timelapse.html">TimeLapse</a></li>
+            <li><a href="photo.html">Photo</a></li>
+            <li><a href="map.html">Map</a></li>
+            <li><a href="https://www.youtube.com/@mutedscapes/videos" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+        </nav>
+        <!--△△ヘッダーリスト△△-->
       </nav>
-
-<!--▽▽ハンバーガーメニュー▽▽-->
-      <div id="hamburger">
-        <div class="icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-<!--△△ハンバーガーメニュー△△-->
-
-<!--▽▽ハンバーガーメニューのリスト▽▽-->
-      <nav class="hamburger-list">
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="timelapse.html">TimeLapse</a></li>
-          <li><a href="photo.html">Photo</a></li>
-          <li><a href="map.html">Map</a></li>
-          <li><a href="https://www.youtube.com/@mutedscapes/videos" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
-        </ul>
-      </nav>
-<!--△△ハンバーガーメニューのリスト△△-->
-
-<!--▽▽ヘッダーリスト▽▽-->
-      <nav class="main-menu">
-        <ul>
-          <li><a href="about.html">About</a></li>
-          <li><a href="timelapse.html">TimeLapse</a></li>
-          <li><a href="photo.html">Photo</a></li>
-          <li><a href="map.html">Map</a></li>
-          <li><a href="https://www.youtube.com/@mutedscapes/videos" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
-        </ul>
-      </nav>
-<!--△△ヘッダーリスト△△-->
-
     </header>
 
     <main>
-
         <section class="main-visual">
           <video autoplay muted playsinline loop>
-            <source src="aquahakata-video/aquahakata_17mb.mp4" />
+            <source src="aquahakata-video/aquahakata_17mb.mp4" type="video/mp4" />
           </video>
         </section>
 
-        <a class="scroll-indicator" href="#overview-intro">
+        <a class="scroll-indicator" href="#overview-intro" aria-label="次のセクションへスクロール">
           <i class="fas fa-chevron-down"></i>
         </a>
         
-        
         <section class="transparent"></section>
 
-     
-        
       <div id="swiper-container">
 
         <section id="overview-intro">
@@ -113,9 +106,6 @@
             <div class="text-container-t">
               <p class="intro-text2">
                 The building, an artificial object, and the sky, a natural object. The building that continues to exist in that place and the sky that continues to change constantly. I have expressed the contrast from two perspectives as a time-lapse.
-                <!-- 人工物であるビルと自然物である空。
-                <br><span>その場に在り続けるビルと</span><span>絶えず変化し続ける空。</span>
-                <br><span>2つの視点での対比を</span><span>タイムラプスとして表現しました。</span> -->
               </p>
               <div class="button">
                 <a href="timelapse.html" class="btn_01">more</a>
@@ -123,7 +113,7 @@
             </div>
             <div class="timelapse-container">
               <video autoplay muted playsinline loop>
-                <source src="video/ksubldg2-960px.mp4" />
+                <source src="video/ksubldg2-960px.mp4" type="video/mp4" />
               </video>
             </div>
           </div>
@@ -135,8 +125,6 @@
             <div class="text-container-s">
               <p class="intro-text2">
                 Window glass that always wears the ever-changing sky and cityscape. I have recorded moments that will never come again in photos.
-              <!-- <span>常に変化し続ける空や</span><span>街並みを纏う窓ガラス。</span>
-                <br><span>もう二度と訪れない瞬間を</span><span>写真で記録しました。</span> -->
               </p>
               <div class="button">
                 <a href="photo.html" class="btn_01">more</a>
@@ -145,30 +133,26 @@
 
             <div class="slide-container">
               <div class="slide-image">
-                  <img src="photo/DSC04179.jpg">
+                  <img src="photo/DSC04179.jpg" alt="スライド画像1" loading="lazy" width="800" height="600">
               </div>
-              <div class="slide-image">
-                  <img src="photo/DSC00751.jpg">
+              <!-- JSで制御するため、2枚目以降は初期状態で非表示 -->
+              <div class="slide-image" style="display: none;">
+                  <img src="photo/DSC00751.jpg" alt="スライド画像2" loading="lazy" width="800" height="600">
               </div>
-              <div class="slide-image">
-                  <img src="photo/DSC04210.jpg">
+              <div class="slide-image" style="display: none;">
+                  <img src="photo/DSC04210.jpg" alt="スライド画像3" loading="lazy" width="800" height="600">
               </div>
             </div>
           </div>
         </section>
 
       </div>
-
     </main>
 
-        <div class="wrapper-index">
-          <footer>
-            <p>&copy;2023 Mutedscapes</p>
-          </footer>
-        </div>
-
+    <div class="wrapper-index">
+      <footer>
+        <p>&copy;2023 Mutedscapes</p>
+      </footer>
+    </div>
   </body>
-  <script>
-
-  </script>
 </html>
