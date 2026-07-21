@@ -2,7 +2,6 @@
 <html lang="ja">
 
   <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -21,7 +20,7 @@
     <link href="./css/all.min.css" rel="stylesheet" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Mutedscapes Original -->
     <script src="./js/script.js" defer></script>
@@ -31,48 +30,46 @@
   </head>
 
   <body>
-    <header>
-
-      <nav>
-        <a href="index.html" class="logo">
-          <img src="images/logo.png">
+    <header class="header">
+      <nav class="nav-container">
+        <a href="index.html" class="logo" aria-label="Mutedscapes ホーム">
+          <img src="images/logo.png" alt="Mutedscapes" width="140" height="auto">
         </a>
-      </nav>
 
-<!--▽▽ハンバーガーメニュー▽▽-->
-        <div id="hamburger">
-          <div class="icon">
-              <span></span>
-              <span></span>
-              <span></span>
-          </div>
-        </div>
-<!--△△ハンバーガーメニュー△△-->
+        <!--▽▽ハンバーガーメニュー▽▽-->
+        <button id="hamburger" class="hamburger-btn" aria-controls="mobile-menu" aria-expanded="false" aria-label="メニューを開く">
+          <span class="icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+        <!--△△ハンバーガーメニュー△△-->
 
-<!--▽▽ハンバーガーメニューのリスト▽▽-->
-        <nav class="hamburger-list">
+        <!--▽▽ハンバーガーメニューのリスト▽▽-->
+        <nav id="mobile-menu" class="hamburger-list" aria-hidden="true">
           <ul>
             <li><a href="about.html">About</a></li>
             <li><a href="timelapse.html">TimeLapse</a></li>
             <li><a href="photo.html">Photo</a></li>
             <li><a href="map.html">Map</a></li>
-            <li><a href="https://www.youtube.com/@mutedscapes/channels" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="https://www.youtube.com/@mutedscapes/videos" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
           </ul>
         </nav>
-<!--△△ハンバーガーメニューのリスト△△-->
+        <!--△△ハンバーガーメニューのリスト△△-->
 
-<!--▽▽ヘッダーリスト▽▽-->
+        <!--▽▽ヘッダーリスト▽▽-->
         <nav class="main-menu">
           <ul>
             <li><a href="about.html">About</a></li>
             <li><a href="timelapse.html">TimeLapse</a></li>
             <li><a href="photo.html">Photo</a></li>
             <li><a href="map.html">Map</a></li>
-            <li><a href="https://www.youtube.com/@mutedscapes/channels" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="https://www.youtube.com/@mutedscapes/videos" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
           </ul>
         </nav>
-<!--△△ヘッダーリスト△△-->
-
+        <!--△△ヘッダーリスト△△-->
+      </nav>
     </header>
 
     <main>
@@ -83,18 +80,17 @@
             </div>
             <div class="youtube-container">
               <video id="timelapse-ditails" autoplay muted playsinline loop>
-                <source src="aquahakata-video/aquahakata_17mb.mp4" />
+                <source src="aquahakata-video/aquahakata_17mb.mp4" type="video/mp4" />
               </video>       
             </div>
 
-          <div class="details">
-            <p><b>Equipment</b><br>Sony ILCE-7M3,&ensp;FE 24-70mm F4 ZA OSS</p>
-            <p><b>Settings</b><br>ISO 400,&ensp;70mm,&ensp;f/14</p>
-            <p><b>DateTime</b><br>11 November,&ensp;2023&ensp;-&ensp;13:43-14:43</p>
-            <p><b>Address</b><br>5-3-8,&ensp;Nakasu,&ensp;Fukuoka-Shi&ensp;Hakata-Ku,&ensp;Fukuoka,&ensp;810-0801,&ensp;Japan</p>
+            <div class="details">
+              <p><b>Equipment</b><br>Sony ILCE-7M3,&ensp;FE 24-70mm F4 ZA OSS</p>
+              <p><b>Settings</b><br>ISO 400,&ensp;70mm,&ensp;f/14</p>
+              <p><b>DateTime</b><br>11 November,&ensp;2023&ensp;-&ensp;13:43-14:43</p>
+              <p><b>Address</b><br>5-3-8,&ensp;Nakasu,&ensp;Fukuoka-Shi&ensp;Hakata-Ku,&ensp;Fukuoka,&ensp;810-0801,&ensp;Japan</p>
+            </div>
           </div>
-        </div>
-
       </article>
     </main>
 
@@ -103,6 +99,5 @@
         <p>&copy;2023 Mutedscapes</p>
       </footer>
     </div>
-
   </body>
 </html>

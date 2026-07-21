@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- jQuery -->
+    <!-- jQuery (Lightboxなど一部ライブラリ用) -->
     <script src="./js/jquery-3.7.0.min.js"></script>
     
     <!-- Lightbox -->
@@ -17,11 +17,11 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 
-    <!-- Fonts -->
+    <!-- Fonts (事前接続と読み込みの最適化) -->
     <link href="./css/all.min.css" rel="stylesheet" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Mutedscapes Original -->
     <script src="./js/script.js" defer></script>
@@ -32,48 +32,47 @@
 
   <body>
 
-    <header>
-
-      <nav>
-        <a href="index.html" class="logo">
-          <img src="images/logo.png">
+    <header class="header">
+      <nav class="nav-container">
+        <a href="index.html" class="logo" aria-label="Mutedscapes ホーム">
+          <!-- CLS防止のためwidth/heightを指定 -->
+          <img src="images/logo.png" alt="Mutedscapes" width="140" height="auto">
         </a>
-      </nav>
 
-<!--▽▽ハンバーガーメニュー▽▽-->
-        <div id="hamburger">
-          <div class="icon">
-              <span></span>
-              <span></span>
-              <span></span>
-          </div>
-        </div>
-<!--△△ハンバーガーメニュー△△-->
+        <!--▽▽ハンバーガーメニュー (アクセシビリティ対応) ▽▽-->
+        <button id="hamburger" class="hamburger-btn" aria-controls="mobile-menu" aria-expanded="false" aria-label="メニューを開く">
+          <span class="icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+        <!--△△ハンバーガーメニュー△△-->
 
-<!--▽▽ハンバーガーメニューのリスト▽▽-->
-        <nav class="hamburger-list">
+        <!--▽▽ハンバーガーメニューのリスト▽▽-->
+        <nav id="mobile-menu" class="hamburger-list" aria-hidden="true">
           <ul>
             <li><a href="about.html">About</a></li>
             <li><a href="timelapse.html">TimeLapse</a></li>
             <li><a href="photo.html">Photo</a></li>
             <li><a href="map.html">Map</a></li>
-            <li><a href="https://www.youtube.com/@mutedscapes/videos" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="https://www.youtube.com/@mutedscapes/videos" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
           </ul>
         </nav>
-<!--△△ハンバーガーメニューのリスト△△-->
+        <!--△△ハンバーガーメニューのリスト△△-->
 
-<!--▽▽ヘッダーリスト▽▽-->
+        <!--▽▽ヘッダーリスト▽▽-->
         <nav class="main-menu">
           <ul>
             <li><a href="about.html">About</a></li>
             <li><a href="timelapse.html">TimeLapse</a></li>
             <li><a href="photo.html">Photo</a></li>
             <li><a href="map.html">Map</a></li>
-            <li><a href="https://www.youtube.com/@mutedscapes/channels" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="https://www.youtube.com/@mutedscapes/videos" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
           </ul>
         </nav>
-<!--△△ヘッダーリスト△△-->
-
+        <!--△△ヘッダーリスト△△-->
+      </nav>
     </header>
 
     <main>
@@ -86,7 +85,8 @@
               <p class="about-text2">Generally, buildings are often perceived as inorganic and cold, seemingly unaffected by the passage of time. However, glass-clad buildings have the added characteristic of reflecting their surroundings. This feature is the focus of “Mutedscapes”. The scenes reflected in the mirror-like glass capture the changes in society and time. In this project, we express the flow of time that exists even in inorganic buildings through time-lapse photography and photos, conveying the charm of the often overlooked scenes reflected in buildings.</p>
             </div>
             <div class="img-container">
-              <img src="photo/DSC04296.jpg"/></a>
+              <!-- 不要な </a> を削除し、alt属性とlazy loadを追加 -->
+              <img src="photo/DSC04296.jpg" alt="Introductionのイメージ" loading="lazy" width="800" height="533" />
             </div>
           </div>
         </section>
@@ -100,7 +100,7 @@
                 Furthermore, by using glass exterior walls, buildings can be made lighter compared to traditional concrete exterior walls, which also has the advantage of reducing the cost of supporting the building.</p>
             </div>
             <div class="img-container">
-              <img src="images/about-2.jpg"/></a>
+              <img src="images/about-2.jpg" alt="カーテンウォールのイメージ" loading="lazy" width="800" height="533" />
             </div>
           </div>
         </section>
@@ -112,14 +112,13 @@
               <p class="about-text2">The title ‘Mutedscapes’ is a compound word combining ‘muted’, which means silent or suppressed in English, and ‘scape’, which means scenery. This title carries the message that in today’s information-saturated society, we want you to immerse yourself in a landscape where information is deliberately limited, in the hope of making new discoveries.</p>
             </div>
             <div class="img-container">
-              <img src="photo/DSC04141.jpg"/></a>
+              <img src="photo/DSC04141.jpg" alt="タイトルコンセプトのイメージ" loading="lazy" width="800" height="533" />
             </div>
           </div>
         </section>
 
       </article>
     </main>
-
 
     <div class="wrapper">
       <footer>

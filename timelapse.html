@@ -17,11 +17,11 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 
-    <!-- Fonts -->
+    <!-- Fonts (事前接続と読み込みの最適化) -->
     <link href="./css/all.min.css" rel="stylesheet" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Mutedscapes Original -->
     <script src="./js/script.js" defer></script>
@@ -31,48 +31,47 @@
   </head>
 
   <body>
-    <header>
-
-      <nav>
-        <a href="index.html" class="logo">
-          <img src="images/logo.png">
+    <header class="header">
+      <nav class="nav-container">
+        <a href="index.html" class="logo" aria-label="Mutedscapes ホーム">
+          <!-- CLS防止のためwidth/heightを指定 -->
+          <img src="images/logo.png" alt="Mutedscapes" width="140" height="auto">
         </a>
-      </nav>
 
-<!--▽▽ハンバーガーメニュー▽▽-->
-        <div id="hamburger">
-          <div class="icon">
-              <span></span>
-              <span></span>
-              <span></span>
-          </div>
-        </div>
-<!--△△ハンバーガーメニュー△△-->
+        <!--▽▽ハンバーガーメニュー (アクセシビリティ対応) ▽▽-->
+        <button id="hamburger" class="hamburger-btn" aria-controls="mobile-menu" aria-expanded="false" aria-label="メニューを開く">
+          <span class="icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+        <!--△△ハンバーガーメニュー△△-->
 
-<!--▽▽ハンバーガーメニューのリスト▽▽-->
-        <nav class="hamburger-list">
+        <!--▽▽ハンバーガーメニューのリスト▽▽-->
+        <nav id="mobile-menu" class="hamburger-list" aria-hidden="true">
           <ul>
             <li><a href="about.html">About</a></li>
             <li><a href="timelapse.html">TimeLapse</a></li>
             <li><a href="photo.html">Photo</a></li>
             <li><a href="map.html">Map</a></li>
-            <li><a href="https://www.youtube.com/@mutedscapes/videos" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="https://www.youtube.com/@mutedscapes/videos" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
           </ul>
         </nav>
-<!--△△ハンバーガーメニューのリスト△△-->
+        <!--△△ハンバーガーメニューのリスト△△-->
 
-<!--▽▽ヘッダーリスト▽▽-->
+        <!--▽▽ヘッダーリスト▽▽-->
         <nav class="main-menu">
           <ul>
             <li><a href="about.html">About</a></li>
             <li><a href="timelapse.html">TimeLapse</a></li>
             <li><a href="photo.html">Photo</a></li>
             <li><a href="map.html">Map</a></li>
-            <li><a href="https://www.youtube.com/@mutedscapes/channels" target="_blank" rel="nofollow"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="https://www.youtube.com/@mutedscapes/videos" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
           </ul>
         </nav>
-<!--△△ヘッダーリスト△△-->
-
+        <!--△△ヘッダーリスト△△-->
+      </nav>
     </header>
 
     <main>
@@ -80,43 +79,54 @@
         <div class="tl-card-container">
 
           <div class="tl-card">
-            <li><a href="soraliatb.html"><img src="images/solariatb.jpg"></a></li>
+            <a href="solariatb.html">
+              <img src="images/solariatb.jpg" alt="Solaria Terminal Building" loading="lazy" width="800" height="533">
+            </a>
             <div class="tl-card-mask">
               <div class="tl-card-caption"><p>Solaria Terminal Building</p></div>
             </div>
           </div>
 
-
           <div class="tl-card">
-            <li><a href="aquahakata.html"><img src="images/aquahakata.jpg"></a></li>
+            <a href="aquahakata.html">
+              <img src="images/aquahakata.jpg" alt="AQUA HAKATA" loading="lazy" width="800" height="533">
+            </a>
             <div class="tl-card-mask">
               <div class="tl-card-caption"><p>AQUA HAKATA</p></div>
             </div>
           </div>
 
           <div class="tl-card">
-            <li><a href="ksu-bldg2.html"><img src="images/ksubldg2.jpg"></a></li>
+            <a href="ksu-bldg2.html">
+              <img src="images/ksubldg2.jpg" alt="Kyushu Sangyo University Bldg.2" loading="lazy" width="800" height="533">
+            </a>
             <div class="tl-card-mask">
               <div class="tl-card-caption"><p>Kyushu Sangyo University<br>Bldg.2</p></div>
             </div>
           </div>
 
           <div class="tl-card">
-            <li><a href="tenjinbc.html"><img src="images/tenjinbc.jpg"></a></li>
+            <a href="tenjinbc.html">
+              <img src="images/tenjinbc.jpg" alt="Tenjin Business Center" loading="lazy" width="800" height="533">
+            </a>
             <div class="tl-card-mask">
               <div class="tl-card-caption"><p>Tenjin Business Center</p></div>
             </div>
           </div>
 
           <div class="tl-card">
-            <li><a href="acrosfukuoka.html"><img src="images/acrosfukuoka.jpg"></a></li>
+            <a href="acrosfukuoka.html">
+              <img src="images/acrosfukuoka.jpg" alt="ACROS Fukuoka" loading="lazy" width="800" height="533">
+            </a>
             <div class="tl-card-mask">
               <div class="tl-card-caption"><p>ACROS Fukuoka</p></div>
             </div>
           </div>
 
           <div class="tl-card">
-            <li><a href="fukuokadb.html"><img src="images/fukuokadb.jpg"></a></li>
+            <a href="fukuokadb.html">
+              <img src="images/fukuokadb.jpg" alt="Fukuoka Diamond Building" loading="lazy" width="800" height="533">
+            </a>
             <div class="tl-card-mask">
               <div class="tl-card-caption"><p>Fukuoka Diamond Building</p></div>
             </div>
